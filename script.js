@@ -774,7 +774,10 @@ let isTransitioning = false;
 let skipNextPopTransition = false;
 
 function getCurrentPageType() {
-  return document.body.classList.contains("page-dark") ? "about" : "home";
+  if (document.body.dataset.page) {
+    return document.body.dataset.page;
+  }
+  return document.getElementById("story") ? "about" : "home";
 }
 
 function cacheCurrentPage() {
@@ -814,8 +817,9 @@ function getCachedPageHtml(targetType) {
 }
 
 function applyPageChrome(targetType, targetHash, { pushHistory }) {
+  document.body.className = "page-dark is-page-transitioning";
+  document.body.dataset.page = targetType;
   if (targetType === "about") {
-    document.body.className = "page-dark is-page-transitioning";
     document.title = "WebGrow — Tentang Kami";
     if (pushHistory) {
       try {
@@ -823,7 +827,6 @@ function applyPageChrome(targetType, targetHash, { pushHistory }) {
       } catch (e) {}
     }
   } else {
-    document.body.className = "page-light is-page-transitioning";
     document.title = "WebGrow — Jasa Pembuatan Website Profesional";
     if (pushHistory) {
       try {
@@ -869,10 +872,10 @@ function runOverlayIris(targetHtml, targetType, targetHash, { pushHistory }) {
     document.body.appendChild(iris);
   }
 
-  iris.style.backgroundColor = targetType === "about" ? "#0a0a0b" : "#ffffff";
+  iris.style.backgroundColor = "#0a0a0b";
   iris.innerHTML = "";
   const clone = document.createElement("div");
-  clone.className = "iris-content-clone " + (targetType === "about" ? "page-dark" : "page-light");
+  clone.className = "iris-content-clone page-dark";
   clone.innerHTML = targetHtml;
   iris.appendChild(clone);
 
