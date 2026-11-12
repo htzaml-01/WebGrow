@@ -21,6 +21,9 @@
 
 
 
+
+
+
 <!-- ========================================================================
        1. TOP NAVBAR (Dark Theme for About Page, exact match to video)
        ======================================================================== -->
@@ -33,6 +36,7 @@
       <ul class="nav-links nav-links-dark" id="navLinks">
         <li><a href="about.html" class="active">About Us</a></li>
         <li><a href="feature.html">Feature</a></li>
+        <li><a href="use-case.html">Use Case</a></li>
         <li><a href="index.html#services">How it Works</a></li>
         <li><a href="index.html#pricing">Pricing</a></li>
         <li><a href="#faq">FAQ</a></li>
@@ -714,6 +718,7 @@
           <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="feature.html">Feature</a></li>
+        <li><a href="use-case.html">Use Case</a></li>
             <li><a href="index.html#services">Services</a></li>
             <li><a href="index.html#features">Solutions</a></li>
             <li><a href="index.html#stats">Case Study</a></li>
@@ -789,6 +794,9 @@
   
   
   
+  
+  
+  
   </div>
 
   <!-- In-Memory Templates for Instant Iris Transition (Works on file:/// and HTTP) -->
@@ -805,6 +813,7 @@
       <ul class="nav-links" id="navLinks">
         <li><a href="about.html">About Us</a></li>
         <li><a href="feature.html">Feature</a></li>
+        <li><a href="use-case.html">Use Case</a></li>
         <li><a href="#services">How it Works</a></li>
         <li><a href="#pricing">Pricing</a></li>
         <li><a href="#faq">FAQ</a></li>
@@ -1961,6 +1970,7 @@
           <ul>
             <li><a href="#top">Home</a></li>
             <li><a href="feature.html">Feature</a></li>
+        <li><a href="use-case.html">Use Case</a></li>
             <li><a href="#services">Services</a></li>
             <li><a href="#features">Solutions</a></li>
             <li><a href="#stats">Case Study</a></li>
@@ -2035,6 +2045,784 @@
   
   
   
+  
+  
+  
+  </template>
+  <template id="aboutPageTemplate">
+<!-- ========================================================================
+       1. TOP NAVBAR (Dark Theme for About Page, exact match to video)
+       ======================================================================== -->
+  <header class="navbar-wrap navbar-dark" id="navbarWrap">
+    <nav class="navbar" aria-label="Main Navigation">
+      <a href="index.html" class="nav-logo" aria-label="WebGrow Home">
+        <img src="Asset/webgrow-logo-light.png" alt="WebGrow" />
+      </a>
+
+      <ul class="nav-links nav-links-dark" id="navLinks">
+        <li><a href="about.html" class="active">About Us</a></li>
+        <li><a href="feature.html">Feature</a></li>
+        <li><a href="use-case.html">Use Case</a></li>
+        <li><a href="index.html#services">How it Works</a></li>
+        <li><a href="index.html#pricing">Pricing</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button type="button" class="btn-nav-white open-modal-btn" data-modal-title="Konsultasikan Kebutuhan Anda">
+          <span class="btn-roll-wrap">
+            <span class="btn-roll-text">Get Started</span>
+            <span class="btn-roll-text" aria-hidden="true">Get Started</span>
+          </span>
+        </button>
+        <button type="button" class="mobile-toggle mobile-toggle-dark" id="mobileToggle" aria-label="Toggle Menu">
+          ☰
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ========================================================================
+       2. STORY SECTION (Our Story — 2 Column Split + David Kim Portrait)
+       ======================================================================== -->
+  <section class="section-padding about-hero-story" id="story">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-tag-wrap"><span class="section-tag">STORY</span></div>
+        <h1 class="section-title">Our story</h1>
+        <p class="section-subtitle">
+          Kami percaya pembuatan website seharusnya tidak terasa rumit. Anda cukup menyampaikan kebutuhan dan tujuan bisnis Anda. Kami membantu menerjemahkannya menjadi website yang siap digunakan.
+        </p>
+      </div>
+
+      <div class="about-story-grid">
+        <!-- Left: Story Narrative Text -->
+        <div class="about-story-text-col reveal">
+          <div class="about-story-paragraphs">
+            <p>
+              Di era digital saat ini, kehadiran website yang profesional bukan lagi sekadar pilihan, melainkan fondasi utama bagi kredibilitas dan pertumbuhan bisnis Anda. Namun banyak pemilik bisnis menghadapi kendala: proses yang berbelit-belit, istilah teknis yang membingungkan, hingga hasil yang tidak sesuai dengan karakter bisnis.
+            </p>
+            <p>
+              WebGrow hadir sebagai solusi satu pintu yang terarah. Kami mendampingi Anda mulai dari konsultasi ide, perancangan desain, proses development, hingga website live dan siap digunakan — dengan alur yang transparan, mudah dipahami, dan siap berkembang mengikuti skala bisnis Anda.
+            </p>
+          </div>
+
+          <div class="about-story-author">
+            <strong class="author-name">David Kim</strong>
+            <span class="author-role">Co-Founder & CEO, WebGrow</span>
+          </div>
+        </div>
+
+        <!-- Right: Story Image Card -->
+        <div class="about-story-img-col reveal">
+          <div class="about-story-card">
+            <img src="https://framerusercontent.com/images/q6p8OJOGWKKcPeOQ3prjCIoLLzk.png?width=2192&height=2600" alt="David Kim – Founder" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       3. TRUSTED BY MARQUEE SECTION
+       ======================================================================== -->
+  <section class="trusted-section trusted-dark">
+    <div class="trusted-inner">
+      <p class="trusted-label">Dipercaya oleh berbagai bisnis dan organisasi di Indonesia</p>
+
+      <div class="marquee-mask">
+        <div class="marquee-track">
+          <!-- Set 1 -->
+          <img src="https://framerusercontent.com/images/kgAOUvnOBam8hImcdbO1KC5FMs.png?width=963&height=144" alt="Logoipsum 1" />
+          <img src="https://framerusercontent.com/images/rtpkKdxZ1K9Pp9ishMmYuGoWO5I.png?width=863&height=176" alt="Logoipsum 2" />
+          <img src="https://framerusercontent.com/images/y2eHMSsZQO1H6WKA79q4b6fpWY.png?width=784&height=144" alt="Logoipsum 3" />
+          <img src="https://framerusercontent.com/images/ol4k2NLMSbtbLmTO0Xmfzhf7I.png?width=776&height=144" alt="Logoipsum 4" />
+          <img src="https://framerusercontent.com/images/yUzHcuQYDrqTzHWux41GbWjKZ8.png?width=1024&height=144" alt="Logoipsum 5" />
+          <img src="https://framerusercontent.com/images/j6NPJrzG0a3XztpqbIMPY4UvONo.png?width=859&height=144" alt="Logoipsum 6" />
+          <!-- Set 2 -->
+          <img src="https://framerusercontent.com/images/kgAOUvnOBam8hImcdbO1KC5FMs.png?width=963&height=144" alt="Logoipsum 1" />
+          <img src="https://framerusercontent.com/images/rtpkKdxZ1K9Pp9ishMmYuGoWO5I.png?width=863&height=176" alt="Logoipsum 2" />
+          <img src="https://framerusercontent.com/images/y2eHMSsZQO1H6WKA79q4b6fpWY.png?width=784&height=144" alt="Logoipsum 3" />
+          <img src="https://framerusercontent.com/images/ol4k2NLMSbtbLmTO0Xmfzhf7I.png?width=776&height=144" alt="Logoipsum 4" />
+          <img src="https://framerusercontent.com/images/yUzHcuQYDrqTzHWux41GbWjKZ8.png?width=1024&height=144" alt="Logoipsum 5" />
+          <img src="https://framerusercontent.com/images/j6NPJrzG0a3XztpqbIMPY4UvONo.png?width=859&height=144" alt="Logoipsum 6" />
+        </div>
+      </div>
+
+      <div class="trusted-divider-row" aria-hidden="true">
+        <div class="trusted-line-left"></div>
+        <div class="trusted-line-right"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       4. WHAT WE BELIEVE SECTION (Three Ideas We Won't Compromise On)
+       ======================================================================== -->
+  <section class="section-padding about-believe-section" id="believe">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-tag-wrap"><span class="section-tag">WHAT WE BELIEVE</span></div>
+        <h2 class="section-title">Three ideas we won't compromise on.</h2>
+        <p class="section-subtitle">
+          Kami percaya pembuatan website seharusnya tidak terasa rumit. Anda cukup menyampaikan kebutuhan dan tujuan bisnis Anda.
+        </p>
+      </div>
+
+      <div class="about-believe-container reveal">
+        <!-- Left Column: Intro + 3 Items -->
+        <div class="believe-left-col">
+          <p class="believe-intro-text">
+            Kami percaya bahwa website yang baik harus mampu mendukung bisnis Anda secara nyata. Prinsip inilah yang menjadi panduan kami dalam setiap perancangan dan pengembangan website untuk klien kami.
+          </p>
+
+          <div class="believe-items-list" id="believeItemsList">
+            <!-- Item 1: Sederhana & Mudah Dikelola -->
+            <div class="believe-item active" data-believe-index="0">
+              <div class="believe-item-icon">
+                <img src="https://framerusercontent.com/images/aUrCpu0Vrbx3Of52JWegqrqTHew.png?width=176&height=176" alt="Clarity" />
+              </div>
+              <div class="believe-item-content">
+                <h4>Sederhana & Mudah Dikelola</h4>
+                <p>Tidak perlu memahami istilah teknis. Kami membantu menjelaskan pilihan dan solusi yang sesuai dengan kebutuhan Anda.</p>
+              </div>
+            </div>
+
+            <!-- Item 2: Desain Menyesuaikan Bisnis -->
+            <div class="believe-item" data-believe-index="1">
+              <div class="believe-item-icon">
+                <img src="https://framerusercontent.com/images/sPoCinBz6YLfbqw3IN6ZzPkD2A.png?width=176&height=176" alt="Operators" />
+              </div>
+              <div class="believe-item-content">
+                <h4>Desain Menyesuaikan Bisnis</h4>
+                <p>Tampilan dan struktur website dibuat mengikuti karakter, identitas, dan tujuan spesifik bisnis Anda.</p>
+              </div>
+            </div>
+
+            <!-- Item 3: Profesional & Terpercaya -->
+            <div class="believe-item" data-believe-index="2">
+              <div class="believe-item-icon">
+                <img src="https://framerusercontent.com/images/X1zCU1aOf1hY275vk5U8t6yZyY.png?width=176&height=176" alt="Trust" />
+              </div>
+              <div class="believe-item-content">
+                <h4>Profesional & Terpercaya</h4>
+                <p>Tampilkan bisnis Anda dengan website yang rapi dan modern untuk meningkatkan kepercayaan calon pelanggan.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Visual Graphic Box -->
+        <div class="believe-right-col">
+          <div class="believe-visual-card">
+            <img src="https://framerusercontent.com/images/Jg4kEefESLtCmCmxvcPq9RBOlM.png?width=1108&height=1300" alt="Glow Background" class="believe-visual-bg" />
+            <div class="believe-svg-overlay">
+              <img src="https://framerusercontent.com/images/t6wzbYuTwLEodDrjnRRPxtVYpY.svg?width=348&height=180" alt="Needs your attention" class="believe-floating-badge active" data-badge-index="0" />
+              <img src="https://framerusercontent.com/images/pHz17jZXVTPCjyQ1QcI4irUlA0.svg?width=348&height=164" alt="Desain Menyesuaikan Bisnis" class="believe-floating-badge" data-badge-index="1" />
+              <img src="https://framerusercontent.com/images/uSyj5jo4oEVVf1xiJPdlm74fD8.svg?width=348&height=164" alt="Profesional & Terpercaya" class="believe-floating-badge" data-badge-index="2" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       5. HOW WE WORK SECTION (Satu Tim dari Awal hingga Online)
+       ======================================================================== -->
+  <section class="section-padding about-work-section" id="work">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-tag-wrap"><span class="section-tag">HOW WE WORK</span></div>
+        <h2 class="section-title">Satu Tim dari Awal hingga Online</h2>
+        <p class="section-subtitle">
+          Tidak perlu mencari designer, developer, dan pihak lainnya secara terpisah. Mulai dari konsultasi hingga website online, setiap tahap dikerjakan dengan alur yang jelas.
+        </p>
+      </div>
+
+      <div class="about-work-grid reveal" id="aboutWorkGrid">
+        <!-- Card 1: Konsultasi Sederhana -->
+        <div class="about-work-card active" data-work-index="0">
+          <div class="about-work-icon">
+            <svg display="block" role="presentation" viewBox="0 0 41 41" xmlns="http://www.w3.org/2000/svg">
+              <path d="M 0 1.833 C 0 0.821 0.821 0 1.833 0 L 5.5 0 C 6.512 0 7.333 0.821 7.333 1.833 C 7.333 2.846 6.512 3.667 5.5 3.667 L 1.833 3.667 C 0.821 3.667 0 2.846 0 1.833 Z" fill="rgba(246, 243, 236, 0.32)" transform="translate(16.5 23.833)"/>
+              <path d="M 23.938 0 C 26.855 0 29.19 0 31.056 0.196 C 32.976 0.399 34.609 0.826 36.033 1.823 C 36.997 2.498 37.835 3.336 38.51 4.3 C 39.507 5.724 39.934 7.358 40.137 9.278 C 40.333 11.144 40.333 13.478 40.333 16.396 L 40.333 16.605 C 40.333 19.522 40.333 21.856 40.137 23.722 C 39.934 25.642 39.507 27.276 38.51 28.7 C 37.835 29.664 36.997 30.502 36.033 31.177 C 34.609 32.174 32.976 32.601 31.056 32.804 C 29.276 32.991 27.068 32.999 24.335 32.999 C 24.264 33.611 24.284 34.229 24.393 34.815 C 24.516 35.484 24.578 35.818 25.088 36.242 C 25.598 36.666 26.098 36.667 27.1 36.667 L 29.333 36.667 C 30.346 36.667 31.167 37.488 31.167 38.5 C 31.167 39.513 30.346 40.333 29.333 40.333 L 11 40.333 C 9.987 40.333 9.167 39.513 9.167 38.5 C 9.167 37.488 9.987 36.667 11 36.667 L 13.233 36.667 C 14.235 36.667 14.737 36.666 15.246 36.242 C 15.755 35.818 15.818 35.484 15.941 34.815 C 16.05 34.229 16.068 33.611 15.997 32.999 C 13.265 32.999 11.058 32.991 9.278 32.804 C 7.358 32.601 5.724 32.174 4.3 31.177 C 3.336 30.502 2.498 29.664 1.823 28.7 C 0.826 27.276 0.399 25.642 0.196 23.722 C 0 21.856 0 19.521 0 16.604 L 0 16.397 C 0 13.479 0 11.144 0.196 9.278 C 0.399 7.358 0.826 5.724 1.823 4.3 C 2.498 3.336 3.336 2.498 4.3 1.823 C 5.724 0.826 7.358 0.399 9.278 0.196 C 11.144 0 13.479 0 16.397 0 Z M 16.5 3.667 C 13.454 3.667 11.313 3.669 9.662 3.843 C 8.044 4.013 7.11 4.333 6.403 4.827 C 5.79 5.256 5.256 5.79 4.827 6.403 C 4.333 7.11 4.013 8.044 3.843 9.662 C 3.669 11.313 3.667 13.454 3.667 16.5 C 3.667 19.546 3.669 21.687 3.843 23.338 C 4.013 24.956 4.333 25.89 4.827 26.597 C 5.256 27.21 5.79 27.744 6.403 28.173 C 7.11 28.667 8.044 28.987 9.662 29.157 C 11.313 29.331 13.454 29.333 16.5 29.333 L 23.833 29.333 C 26.879 29.333 29.02 29.331 30.671 29.157 C 32.289 28.987 33.224 28.668 33.931 28.173 C 34.544 27.744 35.077 27.21 35.506 26.597 C 36 25.89 36.32 24.956 36.49 23.338 C 36.664 21.687 36.667 19.546 36.667 16.5 C 36.667 13.454 36.664 11.313 36.49 9.662 C 36.32 8.044 36 7.11 35.506 6.403 C 35.077 5.79 34.544 5.256 33.931 4.827 C 33.224 4.333 32.289 4.013 30.671 3.843 C 29.02 3.669 26.879 3.667 23.833 3.667 Z" fill="currentColor"/>
+            </svg>
+          </div>
+          <div class="about-work-body">
+            <h3>Konsultasi Sederhana</h3>
+            <p>Ceritakan bisnis, kebutuhan, dan tujuan website Anda kepada kami. Kami bantu pilihkan solusi yang paling tepat.</p>
+          </div>
+        </div>
+
+        <!-- Card 2: Konsep & Desain Terarah -->
+        <div class="about-work-card" data-work-index="1">
+          <div class="about-work-icon">
+            <svg display="block" role="presentation" viewBox="0 0 41 41" xmlns="http://www.w3.org/2000/svg">
+              <path d="M 27.762 0 C 28.469 0 29.043 0.574 29.043 1.281 L 29.043 2.366 C 30.417 2.756 31.576 3.388 32.541 4.431 C 33.87 5.867 34.461 7.683 34.744 9.958 C 35.023 12.205 35.02 15.091 35.02 18.779 L 35.02 19.656 C 35.02 23.345 35.023 26.23 34.744 28.478 C 34.461 30.752 33.87 32.567 32.541 34.004 C 31.199 35.455 29.481 36.113 27.331 36.426 C 25.229 36.731 22.537 36.728 19.133 36.728 L 15.887 36.728 C 12.484 36.728 9.792 36.731 7.689 36.426 C 5.54 36.113 3.822 35.455 2.48 34.004 C 1.151 32.567 0.56 30.752 0.278 28.478 C -0.002 26.23 0 23.345 0 19.656 L 0 18.779 C 0 15.091 -0.002 12.205 0.278 9.958 C 0.56 7.683 1.151 5.867 2.48 4.431 C 3.445 3.387 4.605 2.755 5.98 2.365 L 5.98 1.281 C 5.98 0.574 6.554 0 7.262 0 C 7.969 0 8.543 0.574 8.543 1.281 L 8.543 1.905 C 10.506 1.704 12.928 1.707 15.887 1.707 L 19.133 1.707 C 22.094 1.707 24.516 1.704 26.48 1.905 L 26.48 1.281 C 26.48 0.574 27.054 0 27.762 0 Z M 2.629 12.813 C 2.563 14.447 2.563 16.401 2.563 18.779 L 2.563 19.656 C 2.563 23.412 2.565 26.109 2.82 28.161 C 3.072 30.186 3.551 31.388 4.361 32.264 C 5.158 33.126 6.231 33.624 8.058 33.889 C 9.933 34.162 12.406 34.165 15.887 34.165 L 19.133 34.165 C 22.615 34.165 25.087 34.162 26.963 33.889 C 28.79 33.624 29.863 33.126 30.66 32.264 C 31.47 31.388 31.949 30.186 32.201 28.161 C 32.456 26.109 32.458 23.412 32.458 19.656 L 32.458 18.779 C 32.458 16.401 32.457 14.448 32.201 12.813 Z" fill="currentColor"/>
+            </svg>
+          </div>
+          <div class="about-work-body">
+            <h3>Konsep & Desain Terarah</h3>
+            <p>Kami menerjemahkan kebutuhan tersebut menjadi konsep dan tampilan website yang modern dan profesional.</p>
+          </div>
+        </div>
+
+        <!-- Card 3: Website Siap Digunakan -->
+        <div class="about-work-card" data-work-index="2">
+          <div class="about-work-icon">
+            <svg display="block" role="presentation" viewBox="0 0 41 41" xmlns="http://www.w3.org/2000/svg">
+              <path d="M14 6C14 4.89543 14.8954 4 16 4H24C25.1046 4 26 4.89543 26 6V12C26 13.1046 25.1046 14 24 14H21V19H29C30.6569 19 32 20.3431 32 22V27H34C35.1046 27 36 27.8954 36 29V35C36 36.1046 35.1046 37 34 37H26C24.8954 37 24 36.1046 24 35V29C24 27.8954 24.8954 27 26 27H29V22C29 21.4477 28.5523 21 28 21H12C11.4477 21 11 21.4477 11 22V27H14C15.1046 27 16 27.8954 16 29V35C16 36.1046 15.1046 37 14 37H6C4.89543 37 4 36.1046 4 35V29C4 27.8954 4.89543 27 6 27H9V22C9 20.3431 10.3431 19 12 19H19V14H16C14.8954 14 14 13.1046 14 12V6Z" fill="currentColor"/>
+            </svg>
+          </div>
+          <div class="about-work-body">
+            <h3>Website Siap Digunakan</h3>
+            <p>Konsep yang disepakati dikembangkan dan disiapkan hingga online dan siap digunakan untuk mendukung bisnis Anda.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Timeline Progress Bar Component -->
+      <div class="work-timeline-wrap reveal">
+        <div class="work-timeline-track">
+          <div class="work-timeline-bg-line"></div>
+          <div class="work-timeline-fill-line" id="workFillLine"></div>
+          
+          <div class="work-checkpoint active" data-work-step="0">
+            <svg viewBox="0 0 20 20" fill="none">
+              <path d="M16.0938 0C18.2511 0 20 1.74891 20 3.90625V16.0938C20 18.2511 18.2511 20 16.0938 20H3.90625C1.74891 20 0 18.2511 0 16.0938V3.90625C0 1.74891 1.74891 0 3.90625 0H16.0938ZM10 5C10 7.76141 7.76141 10 5 10C7.76141 10 10 12.2386 10 15C10 12.2386 12.2386 10 15 10C12.2386 10 10 7.76141 10 5Z"/>
+            </svg>
+          </div>
+          
+          <div class="work-checkpoint" data-work-step="1">
+            <svg viewBox="0 0 20 20" fill="none">
+              <path d="M16.0938 0C18.2511 0 20 1.74891 20 3.90625V16.0938C20 18.2511 18.2511 20 16.0938 20H3.90625C1.74891 20 0 18.2511 0 16.0938V3.90625C0 1.74891 1.74891 0 3.90625 0H16.0938ZM10 5C10 7.76141 7.76141 10 5 10C7.76141 10 10 12.2386 10 15C10 12.2386 12.2386 10 15 10C12.2386 10 10 7.76141 10 5Z"/>
+            </svg>
+          </div>
+          
+          <div class="work-checkpoint" data-work-step="2">
+            <svg viewBox="0 0 20 20" fill="none">
+              <path d="M16.0938 0C18.2511 0 20 1.74891 20 3.90625V16.0938C20 18.2511 18.2511 20 16.0938 20H3.90625C1.74891 20 0 18.2511 0 16.0938V3.90625C0 1.74891 1.74891 0 3.90625 0H16.0938ZM10 5C10 7.76141 7.76141 10 5 10C7.76141 10 10 12.2386 10 15C10 12.2386 12.2386 10 15 10C12.2386 10 10 7.76141 10 5Z"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       6. TEAM SECTION (The people behind Zenifo — 3x2 Grid)
+       ======================================================================== -->
+  <section class="section-padding about-team-section" id="team">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-tag-wrap"><span class="section-tag">TEAM</span></div>
+        <h2 class="section-title">Tim di Balik WebGrow Indonesia.</h2>
+        <p class="section-subtitle">
+          Desainer, developer, dan konsultan yang siap membantu menerjemahkan ide bisnis Anda menjadi website yang siap digunakan.
+        </p>
+      </div>
+
+      <div class="about-team-grid">
+        <!-- Member 1: David Kim -->
+        <div class="team-card reveal">
+          <div class="team-card-photo">
+            <img src="https://framerusercontent.com/images/Y5sx32rpehWh7UYKrEKuBwYEtI.png?width=1494&height=1680" alt="David Kim" />
+          </div>
+          <div class="team-card-info">
+            <div class="team-card-meta">
+              <strong>David Kim</strong>
+              <span>Co-founder &amp; CEO</span>
+            </div>
+            <div class="team-social-pill">
+              <a href="https://x.com/" target="_blank" rel="noopener" aria-label="X / Twitter">
+                <img src="https://framerusercontent.com/images/lKFp1XtCxNMlVGgIji3udt0mwW4.png?width=72&height=72" alt="X" />
+              </a>
+              <a href="https://linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                <img src="https://framerusercontent.com/images/9ySIHkgCzf1KB23vqEPP7ho.png?width=72&height=72" alt="LinkedIn" />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Member 2: Marcus T. -->
+        <div class="team-card reveal">
+          <div class="team-card-photo">
+            <img src="https://framerusercontent.com/images/zFbjP0JiuvWsRDedoGdZqm5xQ.png?width=1494&height=1680" alt="Marcus T." />
+          </div>
+          <div class="team-card-info">
+            <div class="team-card-meta">
+              <strong>Marcus T.</strong>
+              <span>Co-founder &amp; CTO</span>
+            </div>
+            <div class="team-social-pill">
+              <a href="https://x.com/" target="_blank" rel="noopener" aria-label="X / Twitter">
+                <img src="https://framerusercontent.com/images/lKFp1XtCxNMlVGgIji3udt0mwW4.png?width=72&height=72" alt="X" />
+              </a>
+              <a href="https://linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                <img src="https://framerusercontent.com/images/9ySIHkgCzf1KB23vqEPP7ho.png?width=72&height=72" alt="LinkedIn" />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Member 3: Aisha R. -->
+        <div class="team-card reveal">
+          <div class="team-card-photo">
+            <img src="https://framerusercontent.com/images/V5YuHc9tyk8TJGQh3Q93wwmp1iI.png?width=1494&height=1680" alt="Aisha R." />
+          </div>
+          <div class="team-card-info">
+            <div class="team-card-meta">
+              <strong>Aisha R.</strong>
+              <span>Head of Product</span>
+            </div>
+            <div class="team-social-pill">
+              <a href="https://x.com/" target="_blank" rel="noopener" aria-label="X / Twitter">
+                <img src="https://framerusercontent.com/images/lKFp1XtCxNMlVGgIji3udt0mwW4.png?width=72&height=72" alt="X" />
+              </a>
+              <a href="https://linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                <img src="https://framerusercontent.com/images/9ySIHkgCzf1KB23vqEPP7ho.png?width=72&height=72" alt="LinkedIn" />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Member 4: Daniel K. -->
+        <div class="team-card reveal">
+          <div class="team-card-photo">
+            <img src="https://framerusercontent.com/images/YF3m3L1yRME3xy9qXlVstiP9ro.png?width=1494&height=1680" alt="Daniel K." />
+          </div>
+          <div class="team-card-info">
+            <div class="team-card-meta">
+              <strong>Daniel K.</strong>
+              <span>Head of Engineering</span>
+            </div>
+            <div class="team-social-pill">
+              <a href="https://x.com/" target="_blank" rel="noopener" aria-label="X / Twitter">
+                <img src="https://framerusercontent.com/images/lKFp1XtCxNMlVGgIji3udt0mwW4.png?width=72&height=72" alt="X" />
+              </a>
+              <a href="https://linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                <img src="https://framerusercontent.com/images/9ySIHkgCzf1KB23vqEPP7ho.png?width=72&height=72" alt="LinkedIn" />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Member 5: Sofia M. -->
+        <div class="team-card reveal">
+          <div class="team-card-photo">
+            <img src="https://framerusercontent.com/images/L5GelNrXUS5syCcZRpV2gBybW70.png?width=1494&height=1680" alt="Sofia M." />
+          </div>
+          <div class="team-card-info">
+            <div class="team-card-meta">
+              <strong>Sofia M.</strong>
+              <span>Head of Design</span>
+            </div>
+            <div class="team-social-pill">
+              <a href="https://x.com/" target="_blank" rel="noopener" aria-label="X / Twitter">
+                <img src="https://framerusercontent.com/images/lKFp1XtCxNMlVGgIji3udt0mwW4.png?width=72&height=72" alt="X" />
+              </a>
+              <a href="https://linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                <img src="https://framerusercontent.com/images/9ySIHkgCzf1KB23vqEPP7ho.png?width=72&height=72" alt="LinkedIn" />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Member 6: Ravi P. -->
+        <div class="team-card reveal">
+          <div class="team-card-photo">
+            <img src="https://framerusercontent.com/images/KJJIuwvsB6v2xzzVgczIStLZZuc.png?width=1494&height=1680" alt="Ravi P." />
+          </div>
+          <div class="team-card-info">
+            <div class="team-card-meta">
+              <strong>Ravi P.</strong>
+              <span>Head of Sales</span>
+            </div>
+            <div class="team-social-pill">
+              <a href="https://x.com/" target="_blank" rel="noopener" aria-label="X / Twitter">
+                <img src="https://framerusercontent.com/images/lKFp1XtCxNMlVGgIji3udt0mwW4.png?width=72&height=72" alt="X" />
+              </a>
+              <a href="https://linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                <img src="https://framerusercontent.com/images/9ySIHkgCzf1KB23vqEPP7ho.png?width=72&height=72" alt="LinkedIn" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       7. TESTIMONIALS SECTION (Curved Fan Carousel)
+       ======================================================================== -->
+  <section class="section-padding" id="testimonials">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-tag-wrap"><span class="section-tag">TESTIMONI</span></div>
+        <h2 class="section-title">Mereka yang Telah Mempercayakan Website-nya kepada Kami</h2>
+        <p class="section-subtitle">
+          Website yang kami bangun digunakan oleh berbagai bisnis dan organisasi dengan kebutuhan yang berbeda.
+        </p>
+      </div>
+
+      <div class="testimonial-fan-viewport reveal" id="testimonialFanViewport">
+        <div class="testimonial-fan-stage" id="testimonialFanStage">
+          <!-- Card 0 -->
+          <div class="t-fan-card" data-fan-index="0">
+            <div class="t-fan-quote">
+              <img src="https://framerusercontent.com/images/ThglkDCepMIJEfIyOCSRzIdG25o.png?width=1216&height=1360" alt="" class="t-fan-quote-bg" />
+              <p>“Prosesnya mudah dan komunikasinya enak. Kebutuhan kami dibantu diterjemahkan menjadi website yang sangat sesuai dan elegan.”</p>
+            </div>
+            <div class="t-fan-profile">
+              <img src="https://framerusercontent.com/images/DoFlnaPLmggUTNl8Xk1V3mNA0.png?width=176&height=176" alt="Eric McClure" class="t-fan-avatar" />
+              <div class="t-fan-meta">
+                <div class="t-fan-name-row">
+                  <strong>Eric McClure</strong>
+                  <svg class="t-fan-verified" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.558 11.797C4.88 12.01 5.313 11.886 5.714 12.162C6.115 12.439 6.382 12.912 6.827 12.912C7.272 12.912 7.539 12.439 7.94 12.162C8.341 11.886 8.774 12.01 9.096 11.797C9.418 11.585 9.489 11.124 9.811 10.816C10.133 10.509 10.614 10.459 10.836 10.137C11.059 9.815 10.935 9.382 11.211 8.981C11.488 8.58 11.961 8.313 11.961 7.868C11.961 7.423 11.488 7.156 11.211 6.755C10.935 6.354 11.059 5.921 10.836 5.599C10.614 5.277 10.133 5.227 9.811 4.919C9.489 4.612 9.418 4.151 9.096 3.939C8.774 3.726 8.341 3.85 7.94 3.574C7.539 3.297 7.272 2.824 6.827 2.824C6.382 2.824 6.115 3.297 5.714 3.574C5.313 3.85 4.88 3.726 4.558 3.939C4.236 4.151 4.165 4.612 3.843 4.919C3.521 5.227 3.04 5.277 2.818 5.599C2.595 5.921 2.719 6.354 2.443 6.755C2.166 7.156 1.693 7.423 1.693 7.868C1.693 8.313 2.166 8.58 2.443 8.981C2.719 9.382 2.595 9.815 2.818 10.137C3.04 10.459 3.521 10.509 3.843 10.816C4.165 11.124 4.236 11.585 4.558 11.797Z" fill="#F6F3EC"/><path d="M5.2 7.9L6.3 9L8.6 6.7" stroke="#121212" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                <span>Business Owner</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 1 -->
+          <div class="t-fan-card" data-fan-index="1">
+            <div class="t-fan-quote">
+              <img src="https://framerusercontent.com/images/ThglkDCepMIJEfIyOCSRzIdG25o.png?width=1216&height=1360" alt="" class="t-fan-quote-bg" />
+              <p>“Dari awal konsultasi sampai website online, prosesnya cukup jelas dan terarah. Sangat membantu kemajuan bisnis kami.”</p>
+            </div>
+            <div class="t-fan-profile">
+              <img src="https://framerusercontent.com/images/l7G1ehCbFagqXiutsoCq3tskeE.png?width=177&height=177" alt="Tahlia Webb" class="t-fan-avatar" />
+              <div class="t-fan-meta">
+                <div class="t-fan-name-row">
+                  <strong>Tahlia Webb</strong>
+                  <svg class="t-fan-verified" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.558 11.797C4.88 12.01 5.313 11.886 5.714 12.162C6.115 12.439 6.382 12.912 6.827 12.912C7.272 12.912 7.539 12.439 7.94 12.162C8.341 11.886 8.774 12.01 9.096 11.797C9.418 11.585 9.489 11.124 9.811 10.816C10.133 10.509 10.614 10.459 10.836 10.137C11.059 9.815 10.935 9.382 11.211 8.981C11.488 8.58 11.961 8.313 11.961 7.868C11.961 7.423 11.488 7.156 11.211 6.755C10.935 6.354 11.059 5.921 10.836 5.599C10.614 5.277 10.133 5.227 9.811 4.919C9.489 4.612 9.418 4.151 9.096 3.939C8.774 3.726 8.341 3.85 7.94 3.574C7.539 3.297 7.272 2.824 6.827 2.824C6.382 2.824 6.115 3.297 5.714 3.574C5.313 3.85 4.88 3.726 4.558 3.939C4.236 4.151 4.165 4.612 3.843 4.919C3.521 5.227 3.04 5.277 2.818 5.599C2.595 5.921 2.719 6.354 2.443 6.755C2.166 7.156 1.693 7.423 1.693 7.868C1.693 8.313 2.166 8.58 2.443 8.981C2.719 9.382 2.595 9.815 2.818 10.137C3.04 10.459 3.521 10.509 3.843 10.816C4.165 11.124 4.236 11.585 4.558 11.797Z" fill="#F6F3EC"/><path d="M5.2 7.9L6.3 9L8.6 6.7" stroke="#121212" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                <span>Founder, Studio Kreatif</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 (Initial Active Center Card) -->
+          <div class="t-fan-card" data-fan-index="2">
+            <div class="t-fan-quote">
+              <img src="https://framerusercontent.com/images/ThglkDCepMIJEfIyOCSRzIdG25o.png?width=1216&height=1360" alt="" class="t-fan-quote-bg" />
+              <p>“Tampilan website jadi jauh lebih profesional dan informasi bisnis kami lebih mudah disampaikan ke calon pelanggan.”</p>
+            </div>
+            <div class="t-fan-profile">
+              <img src="https://framerusercontent.com/images/UTMBeb8qVY0AUIHxItgkJhqk7F0.png?width=177&height=177" alt="Rahmat Pratama" class="t-fan-avatar" />
+              <div class="t-fan-meta">
+                <div class="t-fan-name-row">
+                  <strong>Rahmat Pratama</strong>
+                  <svg class="t-fan-verified" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.558 11.797C4.88 12.01 5.313 11.886 5.714 12.162C6.115 12.439 6.382 12.912 6.827 12.912C7.272 12.912 7.539 12.439 7.94 12.162C8.341 11.886 8.774 12.01 9.096 11.797C9.418 11.585 9.489 11.124 9.811 10.816C10.133 10.509 10.614 10.459 10.836 10.137C11.059 9.815 10.935 9.382 11.211 8.981C11.488 8.58 11.961 8.313 11.961 7.868C11.961 7.423 11.488 7.156 11.211 6.755C10.935 6.354 11.059 5.921 10.836 5.599C10.614 5.277 10.133 5.227 9.811 4.919C9.489 4.612 9.418 4.151 9.096 3.939C8.774 3.726 8.341 3.85 7.94 3.574C7.539 3.297 7.272 2.824 6.827 2.824C6.382 2.824 6.115 3.297 5.714 3.574C5.313 3.85 4.88 3.726 4.558 3.939C4.236 4.151 4.165 4.612 3.843 4.919C3.521 5.227 3.04 5.277 2.818 5.599C2.595 5.921 2.719 6.354 2.443 6.755C2.166 7.156 1.693 7.423 1.693 7.868C1.693 8.313 2.166 8.58 2.443 8.981C2.719 9.382 2.595 9.815 2.818 10.137C3.04 10.459 3.521 10.509 3.843 10.816C4.165 11.124 4.236 11.585 4.558 11.797Z" fill="#F6F3EC"/><path d="M5.2 7.9L6.3 9L8.6 6.7" stroke="#121212" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                <span>Direktur Operasional</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="t-fan-card" data-fan-index="3">
+            <div class="t-fan-quote">
+              <img src="https://framerusercontent.com/images/ThglkDCepMIJEfIyOCSRzIdG25o.png?width=1216&height=1360" alt="" class="t-fan-quote-bg" />
+              <p>“Tidak perlu pusing mikirin hal-hal teknis. Tim WebGrow mendampingi dari awal sampai website benar-benar siap pakai.”</p>
+            </div>
+            <div class="t-fan-profile">
+              <img src="https://framerusercontent.com/images/DoFlnaPLmggUTNl8Xk1V3mNA0.png?width=176&height=176" alt="Michael Brennan" class="t-fan-avatar" />
+              <div class="t-fan-meta">
+                <div class="t-fan-name-row">
+                  <strong>Michael Brennan</strong>
+                  <svg class="t-fan-verified" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.558 11.797C4.88 12.01 5.313 11.886 5.714 12.162C6.115 12.439 6.382 12.912 6.827 12.912C7.272 12.912 7.539 12.439 7.94 12.162C8.341 11.886 8.774 12.01 9.096 11.797C9.418 11.585 9.489 11.124 9.811 10.816C10.133 10.509 10.614 10.459 10.836 10.137C11.059 9.815 10.935 9.382 11.211 8.981C11.488 8.58 11.961 8.313 11.961 7.868C11.961 7.423 11.488 7.156 11.211 6.755C10.935 6.354 11.059 5.921 10.836 5.599C10.614 5.277 10.133 5.227 9.811 4.919C9.489 4.612 9.418 4.151 9.096 3.939C8.774 3.726 8.341 3.85 7.94 3.574C7.539 3.297 7.272 2.824 6.827 2.824C6.382 2.824 6.115 3.297 5.714 3.574C5.313 3.85 4.88 3.726 4.558 3.939C4.236 4.151 4.165 4.612 3.843 4.919C3.521 5.227 3.04 5.277 2.818 5.599C2.595 5.921 2.719 6.354 2.443 6.755C2.166 7.156 1.693 7.423 1.693 7.868C1.693 8.313 2.166 8.58 2.443 8.981C2.719 9.382 2.595 9.815 2.818 10.137C3.04 10.459 3.521 10.509 3.843 10.816C4.165 11.124 4.236 11.585 4.558 11.797Z" fill="#F6F3EC"/><path d="M5.2 7.9L6.3 9L8.6 6.7" stroke="#121212" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                <span>CFO, Mitra Logistik</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="t-fan-card" data-fan-index="4">
+            <div class="t-fan-quote">
+              <img src="https://framerusercontent.com/images/ThglkDCepMIJEfIyOCSRzIdG25o.png?width=1216&height=1360" alt="" class="t-fan-quote-bg" />
+              <p>“Desain modern, cepat dibuka di HP, dan mudah diupdate sendiri. Sangat membantu promosi produk dan konversi penjualan.”</p>
+            </div>
+            <div class="t-fan-profile">
+              <img src="https://framerusercontent.com/images/DoFlnaPLmggUTNl8Xk1V3mNA0.png?width=176&height=176" alt="Siti Anggraini" class="t-fan-avatar" />
+              <div class="t-fan-meta">
+                <div class="t-fan-name-row">
+                  <strong>Siti Anggraini</strong>
+                  <svg class="t-fan-verified" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.558 11.797C4.88 12.01 5.313 11.886 5.714 12.162C6.115 12.439 6.382 12.912 6.827 12.912C7.272 12.912 7.539 12.439 7.94 12.162C8.341 11.886 8.774 12.01 9.096 11.797C9.418 11.585 9.489 11.124 9.811 10.816C10.133 10.509 10.614 10.459 10.836 10.137C11.059 9.815 10.935 9.382 11.211 8.981C11.488 8.58 11.961 8.313 11.961 7.868C11.961 7.423 11.488 7.156 11.211 6.755C10.935 6.354 11.059 5.921 10.836 5.599C10.614 5.277 10.133 5.227 9.811 4.919C9.489 4.612 9.418 4.151 9.096 3.939C8.774 3.726 8.341 3.85 7.94 3.574C7.539 3.297 7.272 2.824 6.827 2.824C6.382 2.824 6.115 3.297 5.714 3.574C5.313 3.85 4.88 3.726 4.558 3.939C4.236 4.151 4.165 4.612 3.843 4.919C3.521 5.227 3.04 5.277 2.818 5.599C2.595 5.921 2.719 6.354 2.443 6.755C2.166 7.156 1.693 7.423 1.693 7.868C1.693 8.313 2.166 8.58 2.443 8.981C2.719 9.382 2.595 9.815 2.818 10.137C3.04 10.459 3.521 10.509 3.843 10.816C4.165 11.124 4.236 11.585 4.558 11.797Z" fill="#F6F3EC"/><path d="M5.2 7.9L6.3 9L8.6 6.7" stroke="#121212" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                <span>Head of Marketing</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-fan-fade" aria-hidden="true"></div>
+
+        <div class="testimonial-fan-controls">
+          <button type="button" class="t-fan-nav-btn" id="tFanPrev" aria-label="Previous Testimonial">←</button>
+          <button type="button" class="t-fan-nav-btn" id="tFanNext" aria-label="Next Testimonial">→</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       8. FAQ SECTION (Centered Header + 2-Column 8-Card Grid)
+       ======================================================================== -->
+  <section class="section-padding" id="faq">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-tag-wrap"><span class="section-tag">FAQ</span></div>
+        <h2 class="section-title">Pertanyaan yang Sering Diajukan</h2>
+        <p class="section-subtitle">
+          Jawaban lengkap seputar konsultasi, proses pengerjaan, dan pengelolaan website di WebGrow.
+        </p>
+      </div>
+
+      <div class="faq-two-col-grid reveal">
+        <!-- Left Column (4 FAQs) -->
+        <div class="faq-col">
+          <div class="faq-item open">
+            <button type="button" class="faq-question">
+              <span>Apakah saya harus sudah memiliki desain website?</span>
+              <span class="faq-icon">−</span>
+            </button>
+            <div class="faq-answer" style="max-height: 160px;">
+              <div class="faq-answer-inner">
+                Tidak perlu. Kami dapat membantu mulai dari konsep dan desain hingga website siap digunakan.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question">
+              <span>Apakah website bisa dibuat sesuai kebutuhan bisnis saya?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Bisa. Kebutuhan setiap bisnis berbeda, sehingga fitur dan struktur website dapat disesuaikan.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question">
+              <span>Apakah saya bisa request fitur tertentu?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Bisa. Untuk kebutuhan khusus, kami akan mempelajari alur dan fitur yang dibutuhkan terlebih dahulu.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question">
+              <span>Apakah sudah termasuk domain dan hosting?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Tergantung paket yang dipilih. Kami menyediakan paket lengkap termasuk domain, hosting berkecepatan tinggi, dan sertifikat SSL siap pakai.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column (4 FAQs) -->
+        <div class="faq-col">
+          <div class="faq-item">
+            <button type="button" class="faq-question">
+              <span>Berapa lama proses pembuatan website?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Durasi tergantung jenis website, jumlah halaman, fitur, dan kesiapan materi. Setelah kebutuhan diketahui, kami akan memberikan estimasi pengerjaan.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question">
+              <span>Apakah setelah website selesai saya bisa mengelolanya sendiri?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Bisa. Website dilengkapi dengan sistem pengelolaan sehingga Anda dapat mengelola konten sesuai kebutuhan bisnis.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question">
+              <span>Saya belum tahu website seperti apa yang dibutuhkan. Apakah bisa konsultasi?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Tentu. Anda cukup ceritakan bisnis dan kebutuhan Anda. Kami akan membantu mengarahkan solusi yang sesuai.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question">
+              <span>Bagaimana alur pengerjaan website di WebGrow?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Mulai dari konsultasi kebutuhan, pembuatan konsep desain, proses development, hingga website online dan siap digunakan.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       9. CTA BANNER
+       ======================================================================== -->
+  <section class="section-padding" id="cta" style="padding-top:40px;">
+    <div class="container">
+      <div class="cta-banner reveal">
+        <div class="cta-banner-bg">
+          <img src="https://framerusercontent.com/images/osmPLRdUjh81bJrvAPD1hDGm0qg.png?width=4640&height=2400" alt="CTA Background" />
+        </div>
+        <div class="cta-banner-content">
+          <h2>Sudah Siap Membawa Bisnis Anda ke Level Berikutnya?</h2>
+          <p>
+            Ceritakan kebutuhan website Anda kepada kami. Tidak perlu bingung dengan istilah teknis. Kami bantu mulai dari ide sampai website siap digunakan.
+          </p>
+          <button type="button" class="btn-cta-white open-modal-btn" data-modal-title="Konsultasikan Kebutuhan Anda">
+            <span class="btn-roll-wrap">
+              <span class="btn-roll-line">Konsultasi Sekarang</span>
+              <span class="btn-roll-line" aria-hidden="true">Konsultasi Sekarang</span>
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       10. FOOTER
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <div class="footer-brand-row">
+            <img src="Asset/webgrow-icon.png" alt="WebGrow Icon" />
+            <span>WebGrow</span>
+          </div>
+          <p class="footer-tagline">
+            Bangun Website, Tumbuhkan Bisnis. Website profesional untuk membantu bisnis tampil lebih terpercaya, menjangkau lebih banyak pelanggan, dan berkembang di era digital.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="about.html#story">Mission &amp; Vision</a></li>
+            <li><a href="about.html#team">Team</a></li>
+            <li><a href="index.html#blog">Press &amp; Media</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="feature.html">Feature</a></li>
+        <li><a href="use-case.html">Use Case</a></li>
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="index.html#features">Solutions</a></li>
+            <li><a href="index.html#stats">Case Study</a></li>
+            <li><a href="index.html#pricing">Pricing</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="about.html#faq">Help Center</a></li>
+            <li><a href="about.html#faq">Documentation</a></li>
+            <li><a href="about.html#faq" class="open-modal-btn" data-modal-title="Contact Support — WebGrow">Contact Support</a></li>
+            <li><a href="about.html#testimonials">Community Forum</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 WebGrow Indonesia. All rights reserved.</p>
+        <div class="footer-socials">
+          <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook">
+            <img src="https://framerusercontent.com/images/UNvZ6ezAeJBQDhUGRQBXeeB4k.png?width=80&height=80" alt="Facebook" />
+          </a>
+          <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">
+            <img src="https://framerusercontent.com/images/jIFYtVSd9rnan8gk8aVyydCzY.png?width=80&height=80" alt="Instagram" />
+          </a>
+          <a href="https://web.telegram.org/" target="_blank" rel="noopener" aria-label="Telegram">
+            <img src="https://framerusercontent.com/images/pNGwU9N6RVrnHQnezRl5C9xMwSA.png?width=80&height=80" alt="Telegram" />
+          </a>
+          <a href="https://x.com/" target="_blank" rel="noopener" aria-label="X / Twitter">
+            <img src="https://framerusercontent.com/images/9fm1Z1cMFfWUM9ETHVKgwJc4E.png?width=80&height=80" alt="X" />
+          </a>
+          <a href="https://www.threads.com/" target="_blank" rel="noopener" aria-label="Threads">
+            <img src="https://framerusercontent.com/images/LJf5M41VwaJHDvCSTmJyF1Ukg0.png?width=80&height=80" alt="Threads" />
+          </a>
+          <a href="https://www.whatsapp.com/" target="_blank" rel="noopener" aria-label="WhatsApp">
+            <img src="https://framerusercontent.com/images/93x342akYJn24RxX2vVUm6DmEU.png?width=80&height=80" alt="WhatsApp" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       INTERACTIVE MODAL (KONSULTASI / GET A QUOTE)
+       ======================================================================== -->
+  <div class="modal-backdrop" id="actionModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-card">
+      <button type="button" class="modal-close" id="closeModalBtn" aria-label="Close Modal">✕</button>
+      <div class="section-tag-wrap" style="margin-bottom:12px;"><span class="section-tag">WEBGROW INDONESIA</span></div>
+      <h3 id="modalTitle">Konsultasikan Kebutuhan Anda</h3>
+      <p>Ceritakan kebutuhan website Anda kepada kami. Tidak perlu bingung dengan istilah teknis — kami bantu mulai dari ide sampai website siap digunakan.</p>
+      <form class="modal-form" id="modalForm">
+        <input type="text" placeholder="Nama Lengkap / Nama Bisnis" required />
+        <input type="email" placeholder="Email atau Nomor WhatsApp" required />
+        <select required>
+          <option value="" disabled selected>Pilih Solusi Website</option>
+          <option value="compro">Website Company Profile (Rp. 1.990.000)</option>
+          <option value="landing">Website Landing Page (Rp. 990.000)</option>
+          <option value="katalog">Website Katalog (Rp. 1.390.000)</option>
+          <option value="store">Online Store / E-Commerce</option>
+          <option value="custom">Website Custom Sesuai Alur Bisnis</option>
+        </select>
+        <button type="submit" class="btn-lime" style="justify-content:center; width:100%; padding:14px;">
+          <span>Kirim &amp; Konsultasi Sekarang</span>
+        </button>
+      </form>
+    </div>
+  </div>
+  
+  
+  
+  
+  
+  
+  
+  
   </template>
   <template id="featurePageTemplate">
 <!-- ========================================================================
@@ -2049,6 +2837,7 @@
       <ul class="nav-links" id="navLinks">
         <li><a href="about.html">About Us</a></li>
         <li><a href="feature.html" class="active">Feature</a></li>
+        <li><a href="use-case.html">Use Case</a></li>
         <li><a href="index.html#services">How it Works</a></li>
         <li><a href="index.html#pricing">Pricing</a></li>
         <li><a href="#faq">FAQ</a></li>
@@ -2689,6 +3478,7 @@
           <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="feature.html">Feature</a></li>
+        <li><a href="use-case.html">Use Case</a></li>
             <li><a href="index.html#services">Services</a></li>
             <li><a href="index.html#features">Solutions</a></li>
             <li><a href="index.html#stats">Case Study</a></li>
@@ -2761,6 +3551,581 @@
   </div>
   
   
+  
+  
+  
+  
+  
+  
+  </template>
+  <template id="useCasePageTemplate">
+<!-- ========================================================================
+       1. TOP NAVBAR (Transparent over Light-Sky Mountain Hero, exact match to video)
+       ======================================================================== -->
+  <header class="navbar-wrap" id="navbarWrap">
+    <nav class="navbar" aria-label="Main Navigation">
+      <a href="index.html" class="nav-logo" aria-label="WebGrow Home">
+        <img src="Asset/webgrow-logo-dark.png" alt="WebGrow" />
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="feature.html">Feature</a></li>
+        <li><a href="use-case.html" class="active">Use Case</a></li>
+        <li><a href="index.html#services">How it Works</a></li>
+        <li><a href="index.html#pricing">Pricing</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button type="button" class="btn-nav-dark open-modal-btn" data-modal-title="Konsultasikan Kebutuhan Anda">
+          <span class="btn-roll-wrap">
+            <span class="btn-roll-text">Get Started</span>
+            <span class="btn-roll-text" aria-hidden="true">Get Started</span>
+          </span>
+        </button>
+        <button type="button" class="mobile-toggle" id="mobileToggle" aria-label="Toggle Menu">
+          ☰
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ========================================================================
+       2. USE CASE HERO SECTION (Flower Meadow Backdrop + Revenue Forecast Card)
+       ======================================================================== -->
+  <section class="hero-section use-case-hero-section" id="top">
+    <div class="hero-bg">
+      <img src="Asset/use-case/uc_hero_bg.png" alt="Flower Meadow Landscape" />
+    </div>
+
+    <div class="hero-container">
+      <div class="hero-title-stack">
+        <div class="hero-text-group">
+          <h1 class="hero-title use-case-hero-title" id="heroTitle">
+            Every team makes decisions.<br />WebGrow makes them faster.
+          </h1>
+          <p class="hero-desc use-case-hero-desc" id="heroDesc">
+            From support tickets to compliance reviews — WebGrow deploys smart web systems that handle the routine calls, surface what matters, and log every decision. Four solutions, one platform.
+          </p>
+        </div>
+
+        <div class="hero-cta-appear" id="heroCtaAppear">
+          <button type="button" class="btn-hero-trial open-modal-btn" data-modal-title="Jadwalkan Demo &amp; Konsultasi Proyek">
+            <img src="Asset/use-case/phone_icon.png" alt="" />
+            <span class="btn-roll-wrap">
+              <span class="btn-roll-text">Book a Demo</span>
+              <span class="btn-roll-text" aria-hidden="true">Book a Demo</span>
+            </span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Floating Frosted Glass Revenue Forecast Card (Exact match to video frame) -->
+      <div class="use-case-hero-frosted">
+        <div class="use-case-hero-dashboard">
+          <img src="Asset/use-case/uc_hero_dashboard.svg" alt="Revenue Forecast Dashboard" />
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-bottom-fade"></div>
+  </section>
+
+  <!-- ========================================================================
+       3. STACKED CARDS SECTION ("One platform. Every function.")
+       ======================================================================== -->
+  <section class="section-padding use-case-stacked-section" id="use-cases">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-tag-wrap"><span class="section-tag">USE CASE</span></div>
+        <h2 class="section-title">One platform. Every function.</h2>
+        <p class="section-subtitle">
+          WebGrow adapts to how your team already works. Pick your team — see what your digital platform handles.
+        </p>
+      </div>
+
+      <div class="uc-cards-stack">
+
+        <!-- Card 1: Operations -->
+        <div class="uc-card reveal">
+          <div class="uc-card-content">
+            <span class="uc-card-tag">OPERATIONS</span>
+            <h3 class="uc-card-title">Run leaner operations.</h3>
+            <p class="uc-card-desc">
+              Your ops team spends 40% of the week moving data. WebGrow deploys automated systems to handle routine work, allowing your team to focus on high-impact growth.
+            </p>
+            <div class="uc-card-subheading">What AI handles</div>
+            <ul class="uc-card-list">
+              <li class="uc-card-list-item">
+                <img src="Asset/use-case/check_icon.png" alt="✓" class="uc-check-icon" />
+                <span>Auto-triage inbound requests</span>
+              </li>
+              <li class="uc-card-list-item">
+                <img src="Asset/use-case/check_icon.png" alt="✓" class="uc-check-icon" />
+                <span>Track vendors and SLAs in real time</span>
+              </li>
+              <li class="uc-card-list-item">
+                <img src="Asset/use-case/check_icon.png" alt="✓" class="uc-check-icon" />
+                <span>Generate weekly reports automatically</span>
+              </li>
+              <li class="uc-card-list-item">
+                <img src="Asset/use-case/check_icon.png" alt="✓" class="uc-check-icon" />
+                <span>Route approvals to the right person</span>
+              </li>
+            </ul>
+            <div class="uc-card-stats">
+              <div class="uc-stat-item">
+                <div class="uc-stat-num">1,000+</div>
+                <div class="uc-stat-label">Ticket per day</div>
+                <img src="Asset/use-case/chart_stat1.png" alt="Chart" class="uc-stat-chart" />
+              </div>
+              <div class="uc-stat-item">
+                <div class="uc-stat-num">87%</div>
+                <div class="uc-stat-label">Ticket handled</div>
+                <img src="Asset/use-case/chart_stat2.png" alt="Chart" class="uc-stat-chart" />
+              </div>
+              <div class="uc-stat-item">
+                <div class="uc-stat-num">24/7</div>
+                <div class="uc-stat-label">Monitoring</div>
+                <img src="Asset/use-case/chart_stat3.png" alt="Chart" class="uc-stat-chart" />
+              </div>
+            </div>
+          </div>
+          <div class="uc-card-preview">
+            <img src="Asset/use-case/card1_dashboard.png" alt="Operations Workflow Dashboard" loading="lazy" />
+          </div>
+        </div>
+
+        <!-- Card 2: Sales -->
+        <div class="uc-card reveal">
+          <div class="uc-card-content">
+            <span class="uc-card-tag">SALES</span>
+            <h3 class="uc-card-title">Close more deals.</h3>
+            <p class="uc-card-desc">
+              Agents qualify leads, enrich accounts, and forecast pipeline in real time. Your reps only talk to buyers who are ready.
+            </p>
+            <div class="uc-card-subheading">What AI handles</div>
+            <ul class="uc-card-list">
+              <li class="uc-card-list-item">
+                <img src="Asset/use-case/check_icon.png" alt="✓" class="uc-check-icon" />
+                <span>Score and route inbound leads</span>
+              </li>
+              <li class="uc-card-list-item">
+                <img src="Asset/use-case/check_icon.png" alt="✓" class="uc-check-icon" />
+                <span>Enrich accounts with live data</span>
+              </li>
+              <li class="uc-card-list-item">
+                <img src="Asset/use-case/check_icon.png" alt="✓" class="uc-check-icon" />
+                <span>Update CRM records automatically</span>
+              </li>
+              <li class="uc-card-list-item">
+                <img src="Asset/use-case/check_icon.png" alt="✓" class="uc-check-icon" />
+                <span>Flag at-risk deals before they slip</span>
+              </li>
+            </ul>
+            <div class="uc-card-stats">
+              <div class="uc-stat-item">
+                <div class="uc-stat-num">15m</div>
+                <div class="uc-stat-label">Min avg. qualify</div>
+                <img src="Asset/use-case/chart_stat1.png" alt="Chart" class="uc-stat-chart" />
+              </div>
+              <div class="uc-stat-item">
+                <div class="uc-stat-num">3x</div>
+                <div class="uc-stat-label">More Pipeline</div>
+                <img src="Asset/use-case/chart_stat2.png" alt="Chart" class="uc-stat-chart" />
+              </div>
+              <div class="uc-stat-item">
+                <div class="uc-stat-num">48%</div>
+                <div class="uc-stat-label">Reply rate</div>
+                <img src="Asset/use-case/chart_stat3.png" alt="Chart" class="uc-stat-chart" />
+              </div>
+            </div>
+          </div>
+          <div class="uc-card-preview">
+            <img src="Asset/use-case/card2_dashboard.png" alt="Sales Runs Dashboard" loading="lazy" />
+          </div>
+        </div>
+
+        <!-- Card 3: Support -->
+        <div class="uc-card reveal">
+          <div class="uc-card-content">
+            <span class="uc-card-tag">SUPPORT</span>
+            <h3 class="uc-card-title">Resolve faster. Escalate smarter.</h3>
+            <p class="uc-card-desc">
+              Agents answer routine questions in under two seconds, draft replies with full context, and escalate tickets when need a human.
+            </p>
+            <div class="uc-card-subheading">What AI handles</div>
+            <ul class="uc-card-list">
+              <li class="uc-card-list-item">
+                <img src="Asset/use-case/check_icon.png" alt="✓" class="uc-check-icon" />
+                <span>Answer policy and shipping questions</span>
+              </li>
+              <li class="uc-card-list-item">
+                <img src="Asset/use-case/check_icon.png" alt="✓" class="uc-check-icon" />
+                <span>Triage tickets by urgency and topic</span>
+              </li>
+              <li class="uc-card-list-item">
+                <img src="Asset/use-case/check_icon.png" alt="✓" class="uc-check-icon" />
+                <span>Draft replies with sources attached</span>
+              </li>
+              <li class="uc-card-list-item">
+                <img src="Asset/use-case/check_icon.png" alt="✓" class="uc-check-icon" />
+                <span>Escalate complex issues with context</span>
+              </li>
+            </ul>
+            <div class="uc-card-stats">
+              <div class="uc-stat-item">
+                <div class="uc-stat-num">1.4s</div>
+                <div class="uc-stat-label">First response</div>
+                <img src="Asset/use-case/chart_stat1.png" alt="Chart" class="uc-stat-chart" />
+              </div>
+              <div class="uc-stat-item">
+                <div class="uc-stat-num">34%</div>
+                <div class="uc-stat-label">Fewer escalations</div>
+                <img src="Asset/use-case/chart_stat2.png" alt="Chart" class="uc-stat-chart" />
+              </div>
+              <div class="uc-stat-item">
+                <div class="uc-stat-num">98%</div>
+                <div class="uc-stat-label">Agent accuracy</div>
+                <img src="Asset/use-case/chart_stat3.png" alt="Chart" class="uc-stat-chart" />
+              </div>
+            </div>
+          </div>
+          <div class="uc-card-preview">
+            <img src="Asset/use-case/card3_dashboard.png" alt="Support Playground Dashboard" loading="lazy" />
+          </div>
+        </div>
+
+        <!-- Card 4: Analytics -->
+        <div class="uc-card reveal">
+          <div class="uc-card-content">
+            <span class="uc-card-tag">ANALYTICS</span>
+            <h3 class="uc-card-title">Turn data into direction.</h3>
+            <p class="uc-card-desc">
+              Replace static dashboards with agents that explain what changed and what to do next. Ask in plain English. Get answers with sources attached.
+            </p>
+            <div class="uc-card-subheading">What AI handles</div>
+            <ul class="uc-card-list">
+              <li class="uc-card-list-item">
+                <img src="Asset/use-case/check_icon.png" alt="✓" class="uc-check-icon" />
+                <span>Which metric changed — and why</span>
+              </li>
+              <li class="uc-card-list-item">
+                <img src="Asset/use-case/check_icon.png" alt="✓" class="uc-check-icon" />
+                <span>Which team should own the alert</span>
+              </li>
+              <li class="uc-card-list-item">
+                <img src="Asset/use-case/check_icon.png" alt="✓" class="uc-check-icon" />
+                <span>What the trend means for next quarter</span>
+              </li>
+              <li class="uc-card-list-item">
+                <img src="Asset/use-case/check_icon.png" alt="✓" class="uc-check-icon" />
+                <span>Surface anomalies before weekly reviews</span>
+              </li>
+            </ul>
+            <div class="uc-card-stats">
+              <div class="uc-stat-item">
+                <div class="uc-stat-num">&lt; 5m</div>
+                <div class="uc-stat-label">First decision</div>
+                <img src="Asset/use-case/chart_stat1.png" alt="Chart" class="uc-stat-chart" />
+              </div>
+              <div class="uc-stat-item">
+                <div class="uc-stat-num">4x</div>
+                <div class="uc-stat-label">Faster workflows</div>
+                <img src="Asset/use-case/chart_stat2.png" alt="Chart" class="uc-stat-chart" />
+              </div>
+              <div class="uc-stat-item">
+                <div class="uc-stat-num">14hrs</div>
+                <div class="uc-stat-label">Saved weekly</div>
+                <img src="Asset/use-case/chart_stat3.png" alt="Chart" class="uc-stat-chart" />
+              </div>
+            </div>
+          </div>
+          <div class="uc-card-preview">
+            <img src="Asset/use-case/card4_dashboard.png" alt="Analytics Approvals Dashboard" loading="lazy" />
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       4. BENTO / BY THE NUMBERS SECTION (Blueprint + 3 Stat Cards)
+       ======================================================================== -->
+  <section class="section-padding uc-bento-section" id="blueprint">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-tag-wrap"><span class="section-tag">STATS</span></div>
+        <h2 class="section-title">By the numbers</h2>
+        <p class="section-subtitle">
+          Teams move faster with WebGrow. Real results from real operators — measured across every active workspace.
+        </p>
+      </div>
+
+      <!-- Top Row: Project Blueprint Wide Card -->
+      <div class="uc-bento-card-wide reveal">
+        <div class="uc-bento-card-left">
+          <div class="uc-bento-tag">Project blueprint</div>
+          <p class="uc-bento-blueprint-text">
+            Once the workflows are mapped and prioritized, we deploy AI agents that don't just run once — they run continuously. Every decision is measured, every outcome is tracked, and every agent improves with your business. The result isn't a one-time fix. It's an operating system that scales with you.
+          </p>
+        </div>
+        <div class="uc-bento-card-right">
+          <img src="Asset/use-case/bento_blueprint.png" alt="Project Blueprint Monolith" loading="lazy" />
+        </div>
+      </div>
+
+      <!-- Bottom Row: 3 Stats Cards -->
+      <div class="uc-bento-grid">
+        <div class="uc-bento-stat-card reveal">
+          <div class="uc-bento-star-watermark">✦</div>
+          <div class="uc-bento-stat-num">3x</div>
+          <div class="uc-bento-stat-title">Automated workflows</div>
+          <div class="uc-bento-stat-sub">Within the first 90 days</div>
+        </div>
+
+        <div class="uc-bento-stat-card uc-bento-hill-card reveal">
+          <div class="uc-bento-stat-num">96%</div>
+          <div class="uc-bento-stat-title">Agent accuracy rate</div>
+          <div class="uc-bento-stat-sub">Across production deployments</div>
+        </div>
+
+        <div class="uc-bento-stat-card reveal">
+          <div class="uc-bento-star-watermark">✦</div>
+          <div class="uc-bento-stat-num">14hrs</div>
+          <div class="uc-bento-stat-title">Saved time per week</div>
+          <div class="uc-bento-stat-sub">Reclaimed from manual reporting</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       5. FAQ ACCORDION SECTION (2 Columns, 8 Interactive Cards)
+       ======================================================================== -->
+  <section class="section-padding uc-faq-section" id="faq">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-tag-wrap"><span class="section-tag">FAQ</span></div>
+        <h2 class="section-title">Frequently asked questions</h2>
+        <p class="section-subtitle">
+          Everything teams ask before getting started. Still curious? Reach out — we usually reply within an hour.
+        </p>
+      </div>
+
+      <div class="uc-faq-grid">
+        <!-- Col 1 -->
+        <div class="uc-faq-col">
+          <div class="uc-faq-card open reveal">
+            <div class="uc-faq-header">
+              <span class="uc-faq-question">What is WebGrow?</span>
+              <span class="uc-faq-icon">✕</span>
+            </div>
+            <div class="uc-faq-answer">
+              WebGrow is a modern web development &amp; AI-driven digital platform. We build high-converting landing pages, company profiles, e-commerce, and automated custom web systems that help your business scale efficiently.
+            </div>
+          </div>
+
+          <div class="uc-faq-card reveal">
+            <div class="uc-faq-header">
+              <span class="uc-faq-question">Do I need engineers to set it up?</span>
+              <span class="uc-faq-icon">+</span>
+            </div>
+            <div class="uc-faq-answer">
+              No technical expertise is required. Our team manages the entire process from conceptual design and architecture to domain connection, hosting setup, and launch.
+            </div>
+          </div>
+
+          <div class="uc-faq-card reveal">
+            <div class="uc-faq-header">
+              <span class="uc-faq-question">Is my data secure?</span>
+              <span class="uc-faq-icon">+</span>
+            </div>
+            <div class="uc-faq-answer">
+              Yes. All our websites and custom applications implement end-to-end SSL encryption, enterprise-grade cloud hosting, automated backups, and strict security compliance.
+            </div>
+          </div>
+
+          <div class="uc-faq-card reveal">
+            <div class="uc-faq-header">
+              <span class="uc-faq-question">How is WebGrow different from a template builder?</span>
+              <span class="uc-faq-icon">+</span>
+            </div>
+            <div class="uc-faq-answer">
+              Unlike generic, bloated page builders, WebGrow crafts clean, custom-coded websites optimized for ultra-fast loading speeds, bespoke conversion funnels, and scalable workflows tailored specifically to your business goals.
+            </div>
+          </div>
+        </div>
+
+        <!-- Col 2 -->
+        <div class="uc-faq-col">
+          <div class="uc-faq-card reveal">
+            <div class="uc-faq-header">
+              <span class="uc-faq-question">Which tools does WebGrow integrate with?</span>
+              <span class="uc-faq-icon">+</span>
+            </div>
+            <div class="uc-faq-answer">
+              We seamlessly integrate with payment gateways (Midtrans, Xendit, Stripe), automated WhatsApp gateways, CRMs (HubSpot, Salesforce), Google Analytics 4, Meta Pixel, and custom REST APIs.
+            </div>
+          </div>
+
+          <div class="uc-faq-card reveal">
+            <div class="uc-faq-header">
+              <span class="uc-faq-question">Can I try before buying?</span>
+              <span class="uc-faq-icon">+</span>
+            </div>
+            <div class="uc-faq-answer">
+              Yes. We offer free strategic consultations and preview concepts so you can review the proposed architecture, wireframes, and design direction before committing.
+            </div>
+          </div>
+
+          <div class="uc-faq-card reveal">
+            <div class="uc-faq-header">
+              <span class="uc-faq-question">What if an issue or error occurs?</span>
+              <span class="uc-faq-icon">+</span>
+            </div>
+            <div class="uc-faq-answer">
+              We provide post-launch maintenance warranties, ongoing technical support, and uptime monitoring so your website runs smoothly 24/7.
+            </div>
+          </div>
+
+          <div class="uc-faq-card reveal">
+            <div class="uc-faq-header">
+              <span class="uc-faq-question">How long until we see results?</span>
+              <span class="uc-faq-icon">+</span>
+            </div>
+            <div class="uc-faq-answer">
+              Landing pages and company profiles typically go live within 5 to 14 business days. Clients often experience increased inquiries and improved conversion rates in the very first weeks post-launch.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       6. FINAL CTA BANNER ("Your team's next decision could make itself.")
+       ======================================================================== -->
+  <section class="section-padding uc-cta-section">
+    <div class="container">
+      <div class="uc-cta-card reveal">
+        <h2 class="uc-cta-title">Your team's next decision could make itself.</h2>
+        <p class="uc-cta-sub">
+          No setup fees, and no ML team required — just connect your data and let WebGrow handle the rest.
+        </p>
+        <button type="button" class="btn-cta-white open-modal-btn" data-modal-title="Konsultasikan Kebutuhan Anda">
+          <span class="btn-roll-wrap">
+            <span class="btn-roll-text">Book a Demo</span>
+            <span class="btn-roll-text" aria-hidden="true">Book a Demo</span>
+          </span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       7. FOOTER (Matching index.html, about.html, feature.html)
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <div class="footer-brand-row">
+            <img src="Asset/webgrow-icon.png" alt="WebGrow Icon" />
+            <span>WebGrow</span>
+          </div>
+          <p class="footer-tagline">
+            Turn scattered data into decisions your team can act on, with AI agents that work around the clock.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Main Pages</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="feature.html">Feature</a></li>
+            <li><a href="use-case.html">Use Case</a></li>
+            <li><a href="index.html#services">Integration</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Other pages</h4>
+          <ul>
+            <li><a href="index.html#pricing">Price</a></li>
+            <li><a href="about.html#story">Career</a></li>
+            <li><a href="index.html#blog">Blog (CMS)</a></li>
+            <li><a href="index.html#blog">Blog Details</a></li>
+            <li><a href="about.html#faq" class="open-modal-btn" data-modal-title="Contact Us">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Utilities</h4>
+          <ul>
+            <li><a href="about.html#faq">Terms of Service</a></li>
+            <li><a href="about.html#faq">Privacy Policy</a></li>
+            <li><a href="feature.html">Design System</a></li>
+            <li><a href="index.html">404</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 WebGrow. Designed by Artificer Design Agency LLC</p>
+        <div class="footer-socials">
+          <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook">
+            <img src="https://framerusercontent.com/images/UNvZ6ezAeJBQDhUGRQBXeeB4k.png?width=80&height=80" alt="Facebook" />
+          </a>
+          <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">
+            <img src="https://framerusercontent.com/images/jIFYtVSd9rnan8gk8aVyydCzY.png?width=80&height=80" alt="Instagram" />
+          </a>
+          <a href="https://web.telegram.org/" target="_blank" rel="noopener" aria-label="Telegram">
+            <img src="https://framerusercontent.com/images/pNGwU9N6RVrnHQnezRl5C9xMwSA.png?width=80&height=80" alt="Telegram" />
+          </a>
+          <a href="https://x.com/" target="_blank" rel="noopener" aria-label="X / Twitter">
+            <img src="https://framerusercontent.com/images/9fm1Z1cMFfWUM9ETHVKgwJc4E.png?width=80&height=80" alt="X" />
+          </a>
+          <a href="https://www.threads.com/" target="_blank" rel="noopener" aria-label="Threads">
+            <img src="https://framerusercontent.com/images/LJf5M41VwaJHDvCSTmJyF1Ukg0.png?width=80&height=80" alt="Threads" />
+          </a>
+          <a href="https://www.whatsapp.com/" target="_blank" rel="noopener" aria-label="WhatsApp">
+            <img src="https://framerusercontent.com/images/93x342akYJn24RxX2vVUm6DmEU.png?width=80&height=80" alt="WhatsApp" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       8. INTERACTIVE MODAL (BOOK A DEMO / KONSULTASI)
+       ======================================================================== -->
+  <div class="modal-backdrop" id="actionModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-card">
+      <button type="button" class="modal-close" id="closeModalBtn" aria-label="Close Modal">✕</button>
+      <div class="section-tag-wrap" style="margin-bottom:12px;"><span class="section-tag">WEBGROW INDONESIA</span></div>
+      <h3 id="modalTitle">Jadwalkan Demo &amp; Konsultasi</h3>
+      <p>Ceritakan kebutuhan website dan sistem bisnis Anda kepada kami. Tim ahli WebGrow akan membantu merancang solusi digital terbaik.</p>
+      <form class="modal-form" id="modalForm">
+        <input type="text" placeholder="Nama Lengkap / Nama Bisnis" required />
+        <input type="email" placeholder="Email Kerja atau WhatsApp" required />
+        <select required>
+          <option value="" disabled selected>Pilih Use Case / Kebutuhan</option>
+          <option value="operations">Operations — Website Company Profile &amp; Portofolio</option>
+          <option value="sales">Sales — High-Converting Landing Page</option>
+          <option value="support">Support — Toko Online &amp; E-Commerce Otomatis</option>
+          <option value="analytics">Analytics — Custom Web App &amp; Internal Dashboard</option>
+        </select>
+        <button type="submit" class="btn-lime" style="justify-content:center; width:100%; padding:14px;">
+          <span>Submit Request</span>
+        </button>
+      </form>
+    </div>
+  </div>
+
   
   
   

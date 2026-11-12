@@ -591,6 +591,23 @@ function initPageInteractions() {
     }
   });
 
+  // Use Case FAQ Accordion Cards
+  const ucFaqCards = Array.from(document.querySelectorAll(".uc-faq-card"));
+  ucFaqCards.forEach((card) => {
+    card.addEventListener("click", () => {
+      const isOpen = card.classList.contains("open");
+      if (isOpen) {
+        card.classList.remove("open");
+        const icon = card.querySelector(".uc-faq-icon");
+        if (icon) icon.textContent = "+";
+      } else {
+        card.classList.add("open");
+        const icon = card.querySelector(".uc-faq-icon");
+        if (icon) icon.textContent = "✕";
+      }
+    });
+  });
+
   /* ------------------------------------------------------------------------
      10. Modal & Command Shortcut (Ctrl/Cmd + K)
      ------------------------------------------------------------------------ */
@@ -789,9 +806,14 @@ const PAGE_CONFIG = {
     path: "feature.html",
     templateId: "featurePageTemplate",
     title: "WebGrow — Features"
+  },
+  useCase: {
+    path: "use-case.html",
+    templateId: "useCasePageTemplate",
+    title: "WebGrow — Use Cases & Solusi Website Bisnis"
   }
 };
-const pageCache = { home: null, about: null, feature: null };
+const pageCache = { home: null, about: null, feature: null, useCase: null };
 let isTransitioning = false;
 let skipNextPopTransition = false;
 
@@ -801,6 +823,9 @@ function resolvePageType(cleanPath, statePage) {
   }
   if (cleanPath === "feature.html" || cleanPath === "feature" || (!cleanPath && statePage === "feature")) {
     return "feature";
+  }
+  if (cleanPath === "use-case.html" || cleanPath === "use-case" || cleanPath === "usecase" || (!cleanPath && statePage === "useCase")) {
+    return "useCase";
   }
   if (cleanPath === "index.html" || cleanPath === "index" || (!cleanPath && statePage === "home")) {
     return "home";
@@ -814,6 +839,7 @@ function getCurrentPageType() {
   }
   if (document.getElementById("story")) return "about";
   if (document.getElementById("capabilities")) return "feature";
+  if (document.getElementById("use-cases")) return "useCase";
   return "home";
 }
 
@@ -857,6 +883,21 @@ function applyPageChrome(targetType, targetHash, { pushHistory }) {
   document.body.className = "page-dark is-page-transitioning";
   document.body.dataset.page = targetType;
   document.title = cfg.title;
+
+  // Sync active class on navbar links
+  document.querySelectorAll(".nav-links a").forEach((a) => {
+    a.classList.remove("active");
+    const href = a.getAttribute("href") || "";
+    if (
+      (targetType === "home" && href === "index.html") ||
+      (targetType === "about" && (href === "about.html" || href.startsWith("about.html"))) ||
+      (targetType === "feature" && (href === "feature.html" || href.startsWith("feature.html"))) ||
+      (targetType === "useCase" && (href === "use-case.html" || href.startsWith("use-case.html")))
+    ) {
+      a.classList.add("active");
+    }
+  });
+
   if (pushHistory) {
     try {
       window.history.pushState(
