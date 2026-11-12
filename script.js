@@ -772,8 +772,8 @@ function initPageInteractions() {
    13. Expanding Circle Iris Page Transitions (Exact Framer Match)
        Incoming page is revealed by a circle growing from viewport center.
    -------------------------------------------------------------------------- */
-const IRIS_DURATION_MS = 720;
-const IRIS_EASING = "cubic-bezier(0.22, 1, 0.36, 1)";
+const IRIS_DURATION_MS = 750;
+const IRIS_EASING = "cubic-bezier(0.25, 1, 0.5, 1)"; // majestic expanding circle curve
 const PAGE_CONFIG = {
   home: {
     path: "index.html",
@@ -879,6 +879,14 @@ function swapToPage(targetHtml, targetType, targetHash, { pushHistory }) {
   applyPageChrome(targetType, targetHash, { pushHistory });
   window.scrollTo(0, 0);
   pageCache[targetType] = targetHtml;
+
+  // Immediately activate above-the-fold reveal elements so there is zero flicker
+  const root = appRoot || document.body;
+  root.querySelectorAll(".reveal").forEach((el) => {
+    if (el.getBoundingClientRect().top < window.innerHeight + 100) {
+      el.classList.add("active");
+    }
+  });
 }
 
 function finishTransition(targetHash) {
@@ -917,7 +925,7 @@ function runOverlayIris(targetHtml, targetType, targetHash, { pushHistory }) {
   const animation = iris.animate(
     [
       { clipPath: "circle(0% at 50% 50%)" },
-      { clipPath: "circle(150% at 50% 50%)" },
+      { clipPath: "circle(88% at 50% 50%)" },
     ],
     { duration: IRIS_DURATION_MS, easing: IRIS_EASING, fill: "forwards" }
   );
@@ -958,17 +966,6 @@ function runIrisTransition(targetType, targetHash, { pushHistory = true } = {}) 
         swapToPage(targetHtml, targetType, targetHash, { pushHistory });
         finishTransition(targetHash);
         return;
-      }
-
-      if (typeof document.startViewTransition === "function") {
-        const transition = document.startViewTransition(() => {
-          swapToPage(targetHtml, targetType, targetHash, { pushHistory });
-        });
-        if (transition.updateCallbackDone) transition.updateCallbackDone.catch(() => {});
-        if (transition.ready) transition.ready.catch(() => {});
-        return transition.finished
-          .catch(() => {})
-          .then(() => finishTransition(targetHash));
       }
 
       return runOverlayIris(targetHtml, targetType, targetHash, { pushHistory });

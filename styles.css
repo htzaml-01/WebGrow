@@ -4101,7 +4101,7 @@ html {
     clip-path: circle(0% at 50% 50%);
   }
   to {
-    clip-path: circle(150% at 50% 50%);
+    clip-path: circle(88% at 50% 50%);
   }
 }
 
@@ -4130,6 +4130,27 @@ body.is-page-transitioning {
   position: absolute;
   top: 0;
   left: 0;
+}
+
+#pageTransitionIris .iris-content-clone .reveal {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
+}
+
+#pageTransitionIris .iris-content-clone .word {
+  opacity: 1 !important;
+  filter: none !important;
+  transform: none !important;
+  animation: none !important;
+}
+
+#pageTransitionIris .iris-content-clone .hero-cta-appear,
+#pageTransitionIris .iris-content-clone .hero-dashboard-frame,
+#pageTransitionIris .iris-content-clone .feature-hero-frosted {
+  opacity: 1 !important;
+  transform: none !important;
+  animation: none !important;
 }
 
 @media (prefers-reduced-motion: reduce) {
