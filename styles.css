@@ -2725,7 +2725,17 @@ button {
   background: #ffffff;
 }
 
-.btn-cta-white:hover .btn-roll-line {
+.btn-cta-white .btn-roll-line,
+.btn-cta-white .btn-roll-text {
+  display: block;
+  line-height: 1.25em;
+  height: 1.25em;
+  white-space: nowrap;
+  transition: transform 0.52s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.btn-cta-white:hover .btn-roll-line,
+.btn-cta-white:hover .btn-roll-text {
   transform: translateY(-100%);
 }
 
