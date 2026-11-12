@@ -457,6 +457,10 @@ function initPageInteractions() {
           priceEl.textContent = nextVal;
         }
       });
+      const compGrowthPrice = document.querySelector(".comp-col-growth .comp-price");
+      if (compGrowthPrice) {
+        compGrowthPrice.innerHTML = mode === "yearly" ? "$79 <span>/Month</span>" : "$99 <span>/Month</span>";
+      }
     });
   });
 
@@ -852,9 +856,14 @@ const PAGE_CONFIG = {
     path: "integration.html",
     templateId: "integrationPageTemplate",
     title: "WebGrow — Integrations & Tools Ecosystem"
+  },
+  pricing: {
+    path: "pricing.html",
+    templateId: "pricingPageTemplate",
+    title: "WebGrow — Simple & Transparent Pricing"
   }
 };
-const pageCache = { home: null, about: null, feature: null, useCase: null, integration: null };
+const pageCache = { home: null, about: null, feature: null, useCase: null, integration: null, pricing: null };
 let isTransitioning = false;
 let skipNextPopTransition = false;
 
@@ -871,6 +880,9 @@ function resolvePageType(cleanPath, statePage) {
   if (cleanPath === "integration.html" || cleanPath === "integration" || cleanPath === "integrations" || (!cleanPath && statePage === "integration")) {
     return "integration";
   }
+  if (cleanPath === "pricing.html" || cleanPath === "pricing" || (!cleanPath && statePage === "pricing")) {
+    return "pricing";
+  }
   if (cleanPath === "index.html" || cleanPath === "index" || (!cleanPath && statePage === "home")) {
     return "home";
   }
@@ -885,6 +897,7 @@ function getCurrentPageType() {
   if (document.getElementById("capabilities")) return "feature";
   if (document.getElementById("use-cases")) return "useCase";
   if (document.getElementById("all-integrations")) return "integration";
+  if (document.getElementById("pricing-comparison") || document.querySelector(".pricing-comparison-section")) return "pricing";
   return "home";
 }
 
@@ -938,7 +951,8 @@ function applyPageChrome(targetType, targetHash, { pushHistory }) {
       (targetType === "about" && (href === "about.html" || href.startsWith("about.html"))) ||
       (targetType === "feature" && (href === "feature.html" || href.startsWith("feature.html"))) ||
       (targetType === "useCase" && (href === "use-case.html" || href.startsWith("use-case.html"))) ||
-      (targetType === "integration" && (href === "integration.html" || href.startsWith("integration.html")))
+      (targetType === "integration" && (href === "integration.html" || href.startsWith("integration.html"))) ||
+      (targetType === "pricing" && (href === "pricing.html" || href.startsWith("pricing.html")))
     ) {
       a.classList.add("active");
     }
