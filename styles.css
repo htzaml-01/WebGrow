@@ -3083,6 +3083,20 @@ button {
     padding: 80px 0;
   }
 
+  .nav-logo img {
+    height: 28px;
+  }
+
+  .nav-actions {
+    gap: 8px;
+  }
+
+  .btn-nav-dark,
+  .btn-nav-light {
+    padding: 9px 15px;
+    font-size: 13.5px;
+  }
+
   .nav-links {
     display: none;
   }
@@ -3717,6 +3731,339 @@ body.page-dark,
 
   .btn-nav-white {
     display: none;
+  }
+}
+
+/* ==========================================================================
+   FEATURES PAGE SPECIFIC STYLES (Matches zenflo-saas.framer.website/feature)
+   ========================================================================== */
+
+.nav-links a.active {
+  color: var(--text-dark);
+  font-weight: 500;
+}
+
+.feature-hero-section .hero-container {
+  gap: 156px;
+}
+
+.feature-hero-title {
+  font-size: clamp(32px, 4.1vw, 60px);
+  max-width: 920px;
+}
+
+.feature-hero-desc {
+  max-width: 640px;
+}
+
+.feature-hero-frosted {
+  position: relative;
+  width: 100%;
+  max-width: 814px;
+  border-radius: 24px 24px 0 0;
+  background-color: rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  padding: 24px 18px 124px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  overflow: hidden;
+  opacity: 0.001;
+  transform: translateY(48px);
+  animation: heroDashAppear 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.42s forwards;
+  will-change: transform, opacity;
+}
+
+.feature-hero-frosted-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 457px;
+  width: 100%;
+  object-fit: cover;
+  object-position: top center;
+  border-radius: 24px 24px 0 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.feature-hero-node {
+  position: relative;
+  z-index: 1;
+  flex: 1 0 0;
+  min-width: 0;
+  aspect-ratio: 1.48295;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 12px 28px rgba(9, 9, 11, 0.1);
+  transition: transform 0.32s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.32s ease;
+}
+
+.feature-hero-node:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 36px rgba(9, 9, 11, 0.18);
+}
+
+.feature-hero-node img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Capabilities Section (3x2 Square Card Grid) */
+.capabilities-section {
+  background-color: var(--bg-primary);
+}
+
+.capabilities-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(50px, 1fr));
+  gap: 20px;
+  width: 100%;
+}
+
+.capability-card {
+  background-color: #212121;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  border-radius: 16px;
+  padding: 20px;
+  min-height: 373px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  transition: background-color 0.28s ease, border-color 0.28s ease, transform 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.capability-card:hover {
+  background-color: #262629;
+  border-color: rgba(227, 255, 72, 0.24);
+  transform: translateY(-3px);
+}
+
+.capability-icon {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+}
+
+.capability-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.capability-body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  width: 100%;
+}
+
+.capability-body h3 {
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.3;
+  letter-spacing: -0.04em;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.capability-body p {
+  font-size: 15px;
+  line-height: 1.5;
+  letter-spacing: -0.015em;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+/* Feature Operations Section (Sticky Stacking Split Cards) */
+.feature-ops-section {
+  background-color: var(--bg-primary);
+  overflow: visible;
+}
+
+.feature-ops-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 100%;
+}
+
+.feature-ops-item {
+  position: sticky;
+  top: 120px;
+  width: 100%;
+}
+
+.feature-ops-card {
+  background-color: #212121;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 -18px 44px rgba(0, 0, 0, 0.45);
+  border-radius: 20px;
+  padding: 8px;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  gap: 12px;
+  width: 100%;
+}
+
+.feature-ops-text {
+  flex: 1 0 0;
+  min-width: 0;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 48px;
+  border-radius: 12px;
+}
+
+.feature-ops-head {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  width: 100%;
+}
+
+.feature-ops-head h3 {
+  font-family: var(--font-display);
+  font-size: clamp(22px, 2vw, 24px);
+  font-weight: 500;
+  line-height: 1.3;
+  letter-spacing: -0.04em;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.feature-ops-head p {
+  font-size: 15.5px;
+  line-height: 1.5;
+  letter-spacing: -0.015em;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.feature-ops-bullets {
+  list-style: none;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+
+.feature-ops-bullets li {
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(246, 243, 236, 0.12);
+  font-size: 15px;
+  line-height: 1.45;
+  letter-spacing: -0.015em;
+  color: var(--text-muted);
+}
+
+.feature-ops-bullets li:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.feature-ops-visual {
+  flex: 1 0 0;
+  min-width: 0;
+  aspect-ratio: 1.05447;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #141416;
+}
+
+.feature-ops-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 1024px) {
+  .feature-hero-section .hero-container {
+    gap: 80px;
+  }
+
+  .feature-hero-frosted {
+    padding: 24px 18px 80px;
+  }
+
+  .capabilities-grid {
+    grid-template-columns: repeat(2, minmax(50px, 1fr));
+  }
+
+  .capability-card {
+    min-height: 320px;
+  }
+
+  .feature-ops-card {
+    gap: 8px;
+  }
+
+  .feature-ops-text {
+    gap: 32px;
+  }
+}
+
+@media (max-width: 680px) {
+  .feature-hero-section .hero-container {
+    gap: 48px;
+  }
+
+  .feature-hero-frosted {
+    padding: 16px 10px 60px;
+    border-radius: 16px 16px 0 0;
+    gap: 8px;
+  }
+
+  .feature-hero-node {
+    border-radius: 8px;
+  }
+
+  .capabilities-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .capability-card {
+    min-height: 240px;
+  }
+
+  .feature-ops-stack {
+    gap: 20px;
+  }
+
+  .feature-ops-item {
+    position: relative;
+    top: 0;
+  }
+
+  .feature-ops-card {
+    flex-direction: column;
+    border-radius: 16px;
+  }
+
+  .feature-ops-text {
+    padding: 16px 12px;
+    gap: 28px;
+  }
+
+  .feature-ops-visual {
+    width: 100%;
   }
 }
 

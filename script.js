@@ -13,32 +13,29 @@ function initPageInteractions() {
   /* ------------------------------------------------------------------------
      1. Hero Word-by-Word Blur + Slide-Up Animation (Exact Framer ai / oi)
      ------------------------------------------------------------------------ */
-  const heroTitle = document.getElementById("heroTitle");
-  if (heroTitle) {
-    const line1 = ["Bangun", "Website,"];
-    const line2 = ["Tumbuhkan", "Bisnis."];
+  function animateElementWords(el, baseDelay, stepDelay) {
+    if (!el || el.querySelector(".word")) return;
+    const rawHtml = el.innerHTML;
+    const lines = rawHtml.split(/<br\s*\/?>/i);
     let idx = 0;
-    const renderLine = (words) =>
-      words
-        .map((w) => {
-          const delay = (0.1 + idx++ * 0.065).toFixed(3);
-          return `<span class="word" style="animation-delay:${delay}s">${w}</span>`;
-        })
-        .join(" ");
-
-    heroTitle.innerHTML = `${renderLine(line1)}<br />${renderLine(line2)}`;
-  }
-
-  const heroDesc = document.getElementById("heroDesc");
-  if (heroDesc) {
-    const words = heroDesc.textContent.trim().split(/\s+/);
-    heroDesc.innerHTML = words
-      .map((w, i) => {
-        const delay = (0.3 + i * 0.03).toFixed(3);
-        return `<span class="word" style="animation-delay:${delay}s">${w}</span>`;
+    el.innerHTML = lines
+      .map((lineHtml) => {
+        const plain = lineHtml.replace(/<[^>]+>/g, " ").trim();
+        if (!plain) return "";
+        return plain
+          .split(/\s+/)
+          .map((w) => {
+            const delay = (baseDelay + idx++ * stepDelay).toFixed(3);
+            return `<span class="word" style="animation-delay:${delay}s">${w}</span>`;
+          })
+          .join(" ");
       })
-      .join(" ");
+      .filter(Boolean)
+      .join("<br />");
   }
+
+  animateElementWords(document.getElementById("heroTitle"), 0.1, 0.065);
+  animateElementWords(document.getElementById("heroDesc"), 0.3, 0.03);
 
   /* ------------------------------------------------------------------------
      1B. Hero Dashboard 3D Perspective Scroll Tilt (.framer-3yc9ez)
@@ -533,14 +530,18 @@ function initPageInteractions() {
       tFanStage.addEventListener("pointerdown", (e) => {
         dragStartX = e.clientX;
       });
-      window.addEventListener("pointerup", (e) => {
-        if (dragStartX === null) return;
-        const dx = e.clientX - dragStartX;
-        dragStartX = null;
-        if (Math.abs(dx) > 45) {
-          stepFan(dx < 0 ? 1 : -1);
-        }
-      });
+      window.addEventListener(
+        "pointerup",
+        (e) => {
+          if (dragStartX === null) return;
+          const dx = e.clientX - dragStartX;
+          dragStartX = null;
+          if (Math.abs(dx) > 45) {
+            stepFan(dx < 0 ? 1 : -1);
+          }
+        },
+        { signal }
+      );
     }
 
     renderTestimonialFan();
@@ -628,15 +629,19 @@ function initPageInteractions() {
     });
   }
 
-  window.addEventListener("keydown", (e) => {
-    if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "k") {
-      e.preventDefault();
-      openModal("Konsultasikan Kebutuhan Website Anda");
-    }
-    if (e.key === "Escape") {
-      closeModal();
-    }
-  });
+  window.addEventListener(
+    "keydown",
+    (e) => {
+      if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "k") {
+        e.preventDefault();
+        openModal("Konsultasikan Kebutuhan Website Anda");
+      }
+      if (e.key === "Escape") {
+        closeModal();
+      }
+    },
+    { signal }
+  );
 
   if (modalForm) {
     modalForm.addEventListener("submit", (e) => {
@@ -769,15 +774,47 @@ function initPageInteractions() {
    -------------------------------------------------------------------------- */
 const IRIS_DURATION_MS = 720;
 const IRIS_EASING = "cubic-bezier(0.22, 1, 0.36, 1)";
-const pageCache = { home: null, about: null };
+const PAGE_CONFIG = {
+  home: {
+    path: "index.html",
+    templateId: "homePageTemplate",
+    title: "WebGrow – Jasa Pembuatan Website Profesional #1"
+  },
+  about: {
+    path: "about.html",
+    templateId: "aboutPageTemplate",
+    title: "WebGrow — Tentang Kami"
+  },
+  feature: {
+    path: "feature.html",
+    templateId: "featurePageTemplate",
+    title: "WebGrow — Features"
+  }
+};
+const pageCache = { home: null, about: null, feature: null };
 let isTransitioning = false;
 let skipNextPopTransition = false;
 
+function resolvePageType(cleanPath, statePage) {
+  if (cleanPath === "about.html" || cleanPath === "about" || (!cleanPath && statePage === "about")) {
+    return "about";
+  }
+  if (cleanPath === "feature.html" || cleanPath === "feature" || (!cleanPath && statePage === "feature")) {
+    return "feature";
+  }
+  if (cleanPath === "index.html" || cleanPath === "index" || (!cleanPath && statePage === "home")) {
+    return "home";
+  }
+  return null;
+}
+
 function getCurrentPageType() {
-  if (document.body.dataset.page) {
+  if (document.body.dataset.page && PAGE_CONFIG[document.body.dataset.page]) {
     return document.body.dataset.page;
   }
-  return document.getElementById("story") ? "about" : "home";
+  if (document.getElementById("story")) return "about";
+  if (document.getElementById("capabilities")) return "feature";
+  return "home";
 }
 
 function cacheCurrentPage() {
@@ -792,17 +829,16 @@ function prefersReducedMotion() {
 }
 
 function getCachedPageHtml(targetType) {
+  const cfg = PAGE_CONFIG[targetType] || PAGE_CONFIG.home;
   if (pageCache[targetType]) return Promise.resolve(pageCache[targetType]);
 
-  const tmplId = targetType === "about" ? "aboutPageTemplate" : "homePageTemplate";
-  const tmpl = document.getElementById(tmplId);
+  const tmpl = document.getElementById(cfg.templateId);
   if (tmpl && tmpl.innerHTML.trim()) {
     pageCache[targetType] = tmpl.innerHTML;
     return Promise.resolve(pageCache[targetType]);
   }
 
-  const targetPath = targetType === "about" ? "about.html" : "index.html";
-  return fetch(targetPath)
+  return fetch(cfg.path)
     .then((res) => {
       if (!res.ok) throw new Error("HTTP " + res.status);
       return res.text();
@@ -817,22 +853,18 @@ function getCachedPageHtml(targetType) {
 }
 
 function applyPageChrome(targetType, targetHash, { pushHistory }) {
+  const cfg = PAGE_CONFIG[targetType] || PAGE_CONFIG.home;
   document.body.className = "page-dark is-page-transitioning";
   document.body.dataset.page = targetType;
-  if (targetType === "about") {
-    document.title = "WebGrow — Tentang Kami";
-    if (pushHistory) {
-      try {
-        window.history.pushState({ page: "about" }, "", "about.html" + (targetHash ? "#" + targetHash : ""));
-      } catch (e) {}
-    }
-  } else {
-    document.title = "WebGrow — Jasa Pembuatan Website Profesional";
-    if (pushHistory) {
-      try {
-        window.history.pushState({ page: "home" }, "", "index.html" + (targetHash ? "#" + targetHash : ""));
-      } catch (e) {}
-    }
+  document.title = cfg.title;
+  if (pushHistory) {
+    try {
+      window.history.pushState(
+        { page: targetType },
+        "",
+        cfg.path + (targetHash ? "#" + targetHash : "")
+      );
+    } catch (e) {}
   }
 }
 
@@ -901,6 +933,7 @@ function runOverlayIris(targetHtml, targetType, targetHash, { pushHistory }) {
 
 function runIrisTransition(targetType, targetHash, { pushHistory = true } = {}) {
   if (isTransitioning) return;
+  const cfg = PAGE_CONFIG[targetType] || PAGE_CONFIG.home;
   const currentType = getCurrentPageType();
 
   if (currentType === targetType) {
@@ -931,6 +964,8 @@ function runIrisTransition(targetType, targetHash, { pushHistory = true } = {}) 
         const transition = document.startViewTransition(() => {
           swapToPage(targetHtml, targetType, targetHash, { pushHistory });
         });
+        if (transition.updateCallbackDone) transition.updateCallbackDone.catch(() => {});
+        if (transition.ready) transition.ready.catch(() => {});
         return transition.finished
           .catch(() => {})
           .then(() => finishTransition(targetHash));
@@ -939,8 +974,7 @@ function runIrisTransition(targetType, targetHash, { pushHistory = true } = {}) 
       return runOverlayIris(targetHtml, targetType, targetHash, { pushHistory });
     })
     .catch(() => {
-      const targetPath = targetType === "about" ? "about.html" : "index.html";
-      window.location.href = targetPath + (targetHash ? "#" + targetHash : "");
+      window.location.href = cfg.path + (targetHash ? "#" + targetHash : "");
     });
 }
 
@@ -974,15 +1008,9 @@ function setupPageTransitions() {
     const cleanPath = (pathPart || "").split("/").pop().toLowerCase();
 
     // Determine target page type
-    let targetType = null;
-    if (cleanPath === "about.html" || cleanPath === "about") {
-      targetType = "about";
-    } else if (cleanPath === "index.html" || cleanPath === "index") {
-      targetType = "home";
-    } else if (cleanPath === "") {
-      // Anchor link on current page
-      targetType = getCurrentPageType();
-    }
+    const targetType = cleanPath === ""
+      ? getCurrentPageType()
+      : resolvePageType(cleanPath, null);
 
     if (!targetType) return;
 
@@ -1017,9 +1045,10 @@ function setupPageTransitions() {
       skipNextPopTransition = false;
       return;
     }
-    const path = window.location.pathname.split("/").pop().toLowerCase();
+    const cleanPath = window.location.pathname.split("/").pop().toLowerCase();
     const hash = window.location.hash.replace("#", "");
-    const targetType = (path.includes("about") || (e.state && e.state.page === "about")) ? "about" : "home";
+    const statePage = e.state && e.state.page ? e.state.page : null;
+    const targetType = resolvePageType(cleanPath, statePage) || "home";
     runIrisTransition(targetType, hash, { pushHistory: false });
   });
 }
