@@ -5089,6 +5089,288 @@ body[data-page="pricing"] .nav-actions .btn-nav-dark {
   font-size: 18px;
 }
 
+/* ==========================================================================
+   15. Contact / Get Started Page & FAQ
+   ========================================================================== */
+body[data-page="contact"] .nav-links a {
+  color: rgba(255, 255, 255, 0.72);
+}
+body[data-page="contact"] .nav-links a:hover {
+  color: #ffffff;
+}
+body[data-page="contact"] .btn-nav-white {
+  background: #ffffff;
+  color: #0a0a0b;
+}
+
+.contact-hero-section {
+  padding: 140px 0 80px;
+  background-color: #0a0a0b;
+  position: relative;
+}
+
+.contact-hero-header {
+  text-align: center;
+  max-width: 820px;
+  margin: 0 auto 56px;
+}
+
+.contact-hero-title {
+  font-family: var(--font-display, "Geist", -apple-system, sans-serif);
+  font-size: clamp(34px, 4.8vw, 58px);
+  font-weight: 600;
+  letter-spacing: -0.035em;
+  line-height: 1.1;
+  color: #f6f3ec;
+  margin: 16px auto 16px;
+}
+
+.contact-hero-desc {
+  font-size: clamp(16px, 1.8vw, 19px);
+  line-height: 1.6;
+  color: rgba(246, 243, 236, 0.72);
+  margin: 0 auto;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.25fr;
+  gap: 36px;
+  align-items: stretch;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.contact-testimonial-card {
+  background: #141416;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  padding: 44px 38px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.contact-quote-icon {
+  width: 32px;
+  height: 28px;
+  margin-bottom: 24px;
+  opacity: 0.85;
+}
+
+.contact-quote-text {
+  font-family: var(--font-display, "Geist", sans-serif);
+  font-size: clamp(20px, 2.2vw, 25px);
+  font-weight: 500;
+  line-height: 1.45;
+  color: #f6f3ec;
+  letter-spacing: -0.02em;
+  margin: 0 0 40px;
+}
+
+.contact-author-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.contact-author-avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.contact-author-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0 0 4px;
+}
+
+.contact-author-role {
+  font-size: 13.5px;
+  color: rgba(255, 255, 255, 0.55);
+  margin: 0;
+}
+
+.contact-form-card {
+  background: #141416;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  padding: 40px 36px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.form-row-2col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-size: 13.5px;
+  font-weight: 500;
+  color: rgba(246, 243, 236, 0.65);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  background: #1e1e21;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  padding: 13px 16px;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 14.5px;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.form-group select option {
+  background: #1e1e21;
+  color: #ffffff;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: rgba(255, 255, 255, 0.35);
+  background: #242428;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 110px;
+}
+
+.contact-submit-btn {
+  width: 100%;
+  height: 48px;
+  background: #e3ff48;
+  color: #0a0a0b;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-submit-btn:hover {
+  background: #f0ff85;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(227, 255, 72, 0.25);
+}
+
+.contact-submit-btn:hover .btn-roll-text,
+.contact-submit-btn:hover .btn-roll-line {
+  transform: translateY(-100%);
+}
+
+.contact-form-success {
+  display: none;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.contact-form-success h4 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 12px 0 8px;
+}
+
+.contact-form-success p {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+/* FAQ Section on Contact Page */
+.contact-faq-section {
+  padding: 80px 0 120px;
+  background-color: #0a0a0b;
+}
+
+.contact-faq-header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 52px;
+}
+
+.contact-faq-title {
+  font-family: var(--font-display, "Geist", -apple-system, sans-serif);
+  font-size: clamp(30px, 4vw, 48px);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  color: #f6f3ec;
+  margin: 16px auto 14px;
+}
+
+.contact-faq-desc {
+  font-size: 16px;
+  line-height: 1.6;
+  color: rgba(246, 243, 236, 0.68);
+  margin: 0 auto;
+}
+
+.faq-list {
+  max-width: 820px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.contact-faq-section .faq-item {
+  background: #141416;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  transition: background-color 0.25s ease, border-color 0.25s ease;
+}
+
+.contact-faq-section .faq-item:hover,
+.contact-faq-section .faq-item.open {
+  background: #19191d;
+  border-color: rgba(255, 255, 255, 0.16);
+}
+
+@media (max-width: 992px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .form-row-2col {
+    grid-template-columns: 1fr;
+  }
+  .contact-testimonial-card,
+  .contact-form-card {
+    padding: 28px 20px;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   ::view-transition-group(root),
   ::view-transition-new(root),

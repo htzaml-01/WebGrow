@@ -464,6 +464,19 @@ function initPageInteractions() {
     });
   });
 
+  /* Contact Page Form Handler */
+  const contactForm = document.getElementById("contactPageForm");
+  if (contactForm) {
+    contactForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const successBox = document.getElementById("contactFormSuccess");
+      if (successBox) {
+        contactForm.style.display = "none";
+        successBox.style.display = "block";
+      }
+    });
+  }
+
   /* ------------------------------------------------------------------------
      9. Curved Fan Testimonial Carousel (Exact Framer _e Arc Math)
      ------------------------------------------------------------------------ */
@@ -861,9 +874,14 @@ const PAGE_CONFIG = {
     path: "pricing.html",
     templateId: "pricingPageTemplate",
     title: "WebGrow — Simple & Transparent Pricing"
+  },
+  contact: {
+    path: "contact.html",
+    templateId: "contactPageTemplate",
+    title: "WebGrow — Get Started & Contact Us"
   }
 };
-const pageCache = { home: null, about: null, feature: null, useCase: null, integration: null, pricing: null };
+const pageCache = { home: null, about: null, feature: null, useCase: null, integration: null, pricing: null, contact: null };
 let isTransitioning = false;
 let skipNextPopTransition = false;
 
@@ -883,6 +901,9 @@ function resolvePageType(cleanPath, statePage) {
   if (cleanPath === "pricing.html" || cleanPath === "pricing" || (!cleanPath && statePage === "pricing")) {
     return "pricing";
   }
+  if (cleanPath === "contact.html" || cleanPath === "contact" || (!cleanPath && statePage === "contact")) {
+    return "contact";
+  }
   if (cleanPath === "index.html" || cleanPath === "index" || (!cleanPath && statePage === "home")) {
     return "home";
   }
@@ -898,6 +919,7 @@ function getCurrentPageType() {
   if (document.getElementById("use-cases")) return "useCase";
   if (document.getElementById("all-integrations")) return "integration";
   if (document.getElementById("pricing-comparison") || document.querySelector(".pricing-comparison-section")) return "pricing";
+  if (document.getElementById("contactPageForm") || document.querySelector(".contact-hero-section")) return "contact";
   return "home";
 }
 
@@ -952,7 +974,8 @@ function applyPageChrome(targetType, targetHash, { pushHistory }) {
       (targetType === "feature" && (href === "feature.html" || href.startsWith("feature.html"))) ||
       (targetType === "useCase" && (href === "use-case.html" || href.startsWith("use-case.html"))) ||
       (targetType === "integration" && (href === "integration.html" || href.startsWith("integration.html"))) ||
-      (targetType === "pricing" && (href === "pricing.html" || href.startsWith("pricing.html")))
+      (targetType === "pricing" && (href === "pricing.html" || href.startsWith("pricing.html"))) ||
+      (targetType === "contact" && (href === "contact.html" || href.startsWith("contact.html")))
     ) {
       a.classList.add("active");
     }
