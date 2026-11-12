@@ -608,6 +608,42 @@ function initPageInteractions() {
     });
   });
 
+  // Integration Category Filters
+  const filterBtns = Array.from(document.querySelectorAll(".integration-filter-btn"));
+  const integrationCards = Array.from(document.querySelectorAll(".integration-card"));
+
+  filterBtns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      filterBtns.forEach((b) => b.classList.remove("active"));
+      btn.classList.add("active");
+      const filter = btn.dataset.filter;
+
+      integrationCards.forEach((card) => {
+        const cat = card.dataset.category;
+        if (filter === "all" || cat === filter) {
+          card.style.display = "flex";
+        } else {
+          card.style.display = "none";
+        }
+      });
+    });
+  });
+
+  // Integration Connect Buttons
+  document.querySelectorAll(".integration-card-btn").forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const isConnected = btn.classList.contains("connected");
+      if (isConnected) {
+        btn.classList.remove("connected");
+        btn.textContent = "Connect";
+      } else {
+        btn.classList.add("connected");
+        btn.textContent = "Connected ✓";
+      }
+    });
+  });
+
   /* ------------------------------------------------------------------------
      10. Modal & Command Shortcut (Ctrl/Cmd + K)
      ------------------------------------------------------------------------ */
@@ -811,9 +847,14 @@ const PAGE_CONFIG = {
     path: "use-case.html",
     templateId: "useCasePageTemplate",
     title: "WebGrow — Use Cases & Solusi Website Bisnis"
+  },
+  integration: {
+    path: "integration.html",
+    templateId: "integrationPageTemplate",
+    title: "WebGrow — Integrations & Tools Ecosystem"
   }
 };
-const pageCache = { home: null, about: null, feature: null, useCase: null };
+const pageCache = { home: null, about: null, feature: null, useCase: null, integration: null };
 let isTransitioning = false;
 let skipNextPopTransition = false;
 
@@ -826,6 +867,9 @@ function resolvePageType(cleanPath, statePage) {
   }
   if (cleanPath === "use-case.html" || cleanPath === "use-case" || cleanPath === "usecase" || (!cleanPath && statePage === "useCase")) {
     return "useCase";
+  }
+  if (cleanPath === "integration.html" || cleanPath === "integration" || cleanPath === "integrations" || (!cleanPath && statePage === "integration")) {
+    return "integration";
   }
   if (cleanPath === "index.html" || cleanPath === "index" || (!cleanPath && statePage === "home")) {
     return "home";
@@ -840,6 +884,7 @@ function getCurrentPageType() {
   if (document.getElementById("story")) return "about";
   if (document.getElementById("capabilities")) return "feature";
   if (document.getElementById("use-cases")) return "useCase";
+  if (document.getElementById("all-integrations")) return "integration";
   return "home";
 }
 
@@ -892,7 +937,8 @@ function applyPageChrome(targetType, targetHash, { pushHistory }) {
       (targetType === "home" && href === "index.html") ||
       (targetType === "about" && (href === "about.html" || href.startsWith("about.html"))) ||
       (targetType === "feature" && (href === "feature.html" || href.startsWith("feature.html"))) ||
-      (targetType === "useCase" && (href === "use-case.html" || href.startsWith("use-case.html")))
+      (targetType === "useCase" && (href === "use-case.html" || href.startsWith("use-case.html"))) ||
+      (targetType === "integration" && (href === "integration.html" || href.startsWith("integration.html")))
     ) {
       a.classList.add("active");
     }

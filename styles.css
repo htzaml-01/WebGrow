@@ -4599,6 +4599,228 @@ body.is-page-transitioning {
   }
 }
 
+
+
+/* --------------------------------------------------------------------------
+   15. Integration Page Specific Styles (Exact Framer Match)
+   -------------------------------------------------------------------------- */
+.integration-hero-section {
+  position: relative;
+  background-color: #0a0a0b;
+  padding: 140px 0 80px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.integration-hero-title {
+  font-size: clamp(34px, 4.2vw, 64px);
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+  max-width: 900px;
+  margin: 0 auto 18px;
+}
+
+.integration-hero-desc {
+  font-size: 16px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.64);
+  max-width: 680px;
+  margin: 0 auto 48px;
+}
+
+.integration-tray-wrapper {
+  position: relative;
+  max-width: 1040px;
+  margin: 0 auto 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 1200px;
+}
+
+.integration-tray-img {
+  width: 100%;
+  max-width: 980px;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.8));
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.integration-tray-img:hover {
+  transform: scale(1.02) rotateX(2deg);
+}
+
+.integration-quote-box {
+  max-width: 680px;
+  margin: 0 auto;
+  font-size: 14.5px;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.55);
+  text-align: center;
+}
+
+/* --- All Integrations Section --- */
+.all-integrations-section {
+  position: relative;
+  background-color: #0a0a0b;
+  padding: 80px 0 120px;
+}
+
+.integration-filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin: 40px auto 48px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 999px;
+  padding: 6px;
+  width: fit-content;
+  max-width: 100%;
+}
+
+.integration-filter-btn {
+  background: transparent;
+  border: none;
+  border-radius: 999px;
+  padding: 8px 18px;
+  font-family: 'Geist', sans-serif;
+  font-size: 13.5px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.65);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.integration-filter-btn:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.integration-filter-btn.active {
+  background: #ffffff;
+  color: #0a0a0b;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.integration-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.integration-card {
+  background-color: #141416;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+  position: relative;
+}
+
+.integration-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 255, 255, 0.18);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4);
+}
+
+.integration-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.integration-card-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.integration-card-icon img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+.integration-card-btn {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 10px;
+  color: #fff;
+  font-family: 'Geist', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 6px 16px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.integration-card-btn:hover {
+  background: rgba(255, 255, 255, 0.16);
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+.integration-card-btn.connected {
+  background: rgba(163, 230, 53, 0.15);
+  border-color: rgba(163, 230, 53, 0.4);
+  color: #a3e635;
+}
+
+.integration-card-tag {
+  font-family: 'Geist Mono', monospace;
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: rgba(255, 255, 255, 0.45);
+  margin-bottom: 8px;
+}
+
+.integration-card-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 10px;
+  letter-spacing: -0.01em;
+}
+
+.integration-card-desc {
+  font-size: 14px;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0;
+}
+
+@media (max-width: 992px) {
+  .integration-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .integration-grid {
+    grid-template-columns: 1fr;
+  }
+  .integration-filter-bar {
+    border-radius: 16px;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   ::view-transition-group(root),
   ::view-transition-new(root),
