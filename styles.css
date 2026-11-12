@@ -4230,17 +4230,16 @@ body.is-page-transitioning {
 
 .uc-card {
   position: sticky;
-  background-color: #141416;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 28px;
-  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.6);
-  padding: 44px 48px;
-  display: grid;
-  grid-template-columns: 1.15fr 1fr;
-  gap: 48px;
-  align-items: center;
+  background-color: #212121;
+  border-radius: 24px;
+  padding: 12px;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  gap: 20px;
   overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.45);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .uc-card:nth-child(1) { top: 96px; z-index: 1; }
@@ -4248,86 +4247,87 @@ body.is-page-transitioning {
 .uc-card:nth-child(3) { top: 136px; z-index: 3; }
 .uc-card:nth-child(4) { top: 156px; z-index: 4; }
 
-.uc-card:hover {
-  border-color: rgba(255, 255, 255, 0.16);
-}
-
 .uc-card-content {
+  flex: 0 0 400px;
+  max-width: 420px;
+  padding: 24px 16px 20px 28px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
 
 .uc-card-tag {
-  display: inline-block;
-  width: fit-content;
-  font-family: 'Geist Mono', monospace;
-  font-size: 11px;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  color: #a3e635;
-  padding: 4px 12px;
-  border-radius: 999px;
-  background: rgba(163, 230, 53, 0.08);
-  border: 1px solid rgba(163, 230, 53, 0.2);
-  margin-bottom: 18px;
+  display: block;
+  font-family: var(--font-mono, 'Geist Mono', monospace);
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(246, 243, 236, 0.6);
+  letter-spacing: 0.02em;
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0 0 10px;
+  text-transform: none;
 }
 
 .uc-card-title {
-  font-size: clamp(26px, 2.8vw, 36px);
-  font-weight: 700;
-  color: #fff;
+  font-family: var(--font-display, 'Geist', sans-serif);
+  font-size: clamp(24px, 2.3vw, 32px);
+  font-weight: 600;
+  color: #ffffff;
   line-height: 1.15;
-  letter-spacing: -0.02em;
-  margin-bottom: 14px;
+  letter-spacing: -0.03em;
+  margin: 0 0 10px;
 }
 
 .uc-card-desc {
-  font-size: 15px;
-  color: rgba(255, 255, 255, 0.64);
-  line-height: 1.6;
-  margin-bottom: 24px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: rgba(246, 243, 236, 0.64);
+  margin: 0 0 20px;
 }
 
 .uc-card-subheading {
-  font-size: 12.5px;
+  font-size: 14px;
   font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: rgba(255, 255, 255, 0.85);
-  margin-bottom: 14px;
+  color: rgba(246, 243, 236, 0.9);
+  margin-bottom: 10px;
+  text-transform: none;
+  letter-spacing: 0.01em;
 }
 
 .uc-card-list {
   list-style: none;
   padding: 0;
-  margin: 0 0 32px 0;
+  margin: 0 0 22px 0;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 9px;
 }
 
 .uc-card-list-item {
   display: flex;
   align-items: center;
-  gap: 12px;
-  font-size: 14px;
-  color: rgba(255, 255, 255, 0.85);
+  gap: 10px;
+  font-size: 13.5px;
+  color: rgba(246, 243, 236, 0.85);
 }
 
 .uc-check-icon {
-  width: 16px;
-  height: 16px;
+  width: 14px;
+  height: 14px;
   object-fit: contain;
   flex-shrink: 0;
+  color: #ffffff;
 }
 
 .uc-card-stats {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
-  padding-top: 24px;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  gap: 14px;
+  padding-top: 0;
+  border-top: none;
+  margin-top: auto;
 }
 
 .uc-stat-item {
@@ -4336,42 +4336,69 @@ body.is-page-transitioning {
 }
 
 .uc-stat-num {
-  font-size: clamp(20px, 2.2vw, 26px);
+  font-family: var(--font-display, 'Geist', sans-serif);
+  font-size: 22px;
   font-weight: 700;
-  color: #fff;
+  color: #ffffff;
   letter-spacing: -0.02em;
+  line-height: 1.2;
 }
 
 .uc-stat-label {
   font-size: 12px;
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(246, 243, 236, 0.5);
   margin-top: 2px;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
   white-space: nowrap;
 }
 
 .uc-stat-chart {
-  height: 22px;
+  height: 20px;
   width: 100%;
-  max-width: 90px;
-  object-fit: contain;
-  object-position: left center;
+  max-width: 100px;
+  object-fit: fill;
+  display: block;
 }
 
 .uc-card-preview {
-  position: relative;
-  border-radius: 20px;
+  flex: 1 1 0;
+  min-width: 0;
+  border-radius: 16px;
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.1);
   background: #18181b;
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
+  position: relative;
+  display: flex;
+  align-items: stretch;
 }
 
 .uc-card-preview img {
   width: 100%;
-  height: auto;
+  height: 100%;
   display: block;
   object-fit: cover;
+  object-position: left top;
+  border-radius: 16px;
+}
+
+@media (max-width: 960px) {
+  .uc-card {
+    flex-direction: column;
+    padding: 16px;
+    gap: 20px;
+  }
+  .uc-card-content {
+    flex: none;
+    max-width: 100%;
+    padding: 16px 12px;
+  }
+  .uc-card-preview {
+    flex: none;
+    width: 100%;
+  }
+  .uc-card-preview img {
+    min-height: auto;
+    height: auto;
+  }
 }
 
 /* --- Bento Grid Section --- */
